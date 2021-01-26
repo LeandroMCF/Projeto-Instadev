@@ -36,6 +36,9 @@ main{
     display: flex;
     justify-content: center;
 }
+a{
+    text-decoration: none;
+}
 
 
 
@@ -124,6 +127,8 @@ p{
     padding-bottom: 50px;
     width: 100%;
     justify-content: space-around;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .botoes input[type="text"]{
     border: solid;
@@ -145,7 +150,9 @@ p{
 #escolhaImg{
     background-color: #d1d1d1;
     width: auto;
+    color: #7d7d7d;
 }
 #postarImg{
     background-color: #2686CC;
+    color: white;
 }
