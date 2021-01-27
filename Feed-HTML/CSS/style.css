@@ -39,20 +39,18 @@ main{
 a{
     text-decoration: none;
 }
-
+li{
+    list-style-type: none;
+}
 
 
 
 /*topo*/
 .topo{
     background-color:#FFF;
-    width: 1920px;
+    width: 100%;
     height: 53px;
     
-}
-.topo img{
-    width: 32px;
-    height: 32px;
 }
 .menu{
     display: flex;
@@ -78,7 +76,14 @@ a{
     align-items: center;
     justify-content: space-between;
 }
-
+.icons img{
+    width: auto;
+    height: auto;
+}
+.logo{
+    width: auto;
+    height: auto;
+}
 
 
 
@@ -259,15 +264,71 @@ p{
     width: 100%;
     height: 100%;
 }
+.curtir-comentar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+.curtir-comentar img{
+    width: auto;
+    height: auto;
+    margin-top: 14.8px;
+}
+#icon-curtir{
+    margin-left: 21.33px;
+}
+#icon-comentar{
+    margin-left: 15px;
+}
+.curtir-comentar input[type="text"]{
+    width: 220px;
+    height: 16px;
+    padding: 10px 5px 10px 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border-bottom: solid;
+    border-color: #f1f1f1f1;
+    margin-top: 15px
+}
+.comentario{
+    width: 300px;
+    display: flex;
+}
+.comentario h2{
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.comentario p{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*footer*/
 .rodape{
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#909090;
-    margin-left: 830px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 80px;
     background-color: #FFF;
+    border-top: solid;
+    border-width: 1px;
+    border-color: #f1f1f1;
+    margin-top: 5px;
+}
+.rodape h2{
+    font-size: 14px;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#909090;
 }
