@@ -94,6 +94,18 @@ p{
     color: #B6B6B6;
 }
 /*fim stories*/
+
+
+
+
+
+
+
+
+
+
+
+
 /*postar*/
 .postar{
     border: solid;
@@ -155,4 +167,50 @@ p{
 #postarImg{
     background-color: #2686CC;
     color: white;
+}
+/*fim postar*/
+
+
+
+
+
+
+
+
+/*postagem*/
+.postagem{
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: solid;
+    border-color: #f1f1f1;
+    border-width: 1px;
+    width: 610px;
+    height: 610px;
+    margin-top: 38px;
+}
+.perfil-post{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 13px;
+    margin-left: 16px;
+    width: 100%;
+}
+.perfil-post img{
+    width: 34px;
+    height: 34px;
+}
+.perfil-post h2{
+    font-size: 13px;
+    margin-bottom: -5px;
+}
+.imagem-post{
+    width: 100%;
+    height: 343px;
+    background: yellow;
+}
+.imagem-post img{
+    width: 100%;
+    height: 100%;
 }
