@@ -179,7 +179,6 @@ p{
 
 /*postagem*/
 .postagem{
-    display: flex;
     flex-direction: column;
     background: #ffffff;
     border: solid;
@@ -196,6 +195,7 @@ p{
     margin-top: 13px;
     margin-left: 16px;
     width: 100%;
+    margin-bottom: 16px;
 }
 .perfil-post img{
     width: 34px;
