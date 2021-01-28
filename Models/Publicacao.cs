@@ -25,12 +25,12 @@ namespace Projeto_Instadev.Models
             CreateFolderAndFile(PATH);
         }
 
-        public void CriarPublicacao(string _path)
+        public void CriarPublicacao()
         {
             Publicacao publicacao = new Publicacao();
             Usuario usuario = new Usuario();
             string[] linha = { PrepararLinha(publicacao) };
-            File.AppendAllLines(_path, linha);
+            File.AppendAllLines(PATH, linha);
         }
 
         public List<Publicacao> ListarPublicacao(string _path)
@@ -50,6 +50,20 @@ namespace Projeto_Instadev.Models
                 publicacao.Add(publi);
             }
             return publicacao;
+        }
+
+        public void Editarpublicacao(Publicacao p)
+        {
+            List<string> linhas = new List<string>();
+            linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
+            linhas.Add( PrepararLinha(p) );
+            RewriteCSV(PATH, linhas);
+        }
+
+        public void ExcluirPublicacao(Publicacao p)
+        {
+            List<string> linhas = new List<string>();
+            linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
         }
     }
 }
