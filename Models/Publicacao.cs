@@ -13,6 +13,8 @@ namespace Projeto_Instadev.Models
         
         public int Likes { get; set; }
 
+        public string PATH = "Database/publicacao.csv";
+
         private string PrepararLinha(Publicacao p)
         {
             return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};{p.Likes}";

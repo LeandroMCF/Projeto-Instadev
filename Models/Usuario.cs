@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Projeto_Instadev.Interfaces;
@@ -75,6 +76,15 @@ namespace Projeto_Instadev.Models
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
             linhas.Add( PrepararLinha(u) );                        
             RewriteCSV(PATH, linhas); 
+        }
+
+        //gerando id aleatoriamente
+
+        public int GerarId()
+        {
+            Random numAleatorio = new Random();
+            int numero = numAleatorio.Next(100, 999);
+            return numero;
         }
     }
 }
