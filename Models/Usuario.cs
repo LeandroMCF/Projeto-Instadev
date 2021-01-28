@@ -78,13 +78,6 @@ namespace Projeto_Instadev.Models
             RewriteCSV(PATH, linhas); 
         }
 
-        //gerando id aleatoriamente
 
-        public int GerarId()
-        {
-            Random numAleatorio = new Random();
-            int numero = numAleatorio.Next(100, 999);
-            return numero;
-        }
     }
 }

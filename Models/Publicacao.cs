@@ -20,6 +20,11 @@ namespace Projeto_Instadev.Models
             return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};{p.Likes}";
         }
 
+        public Publicacao()
+        {
+            CreateFolderAndFile(PATH);
+        }
+
         public void CriarPublicacao(string _path)
         {
             Publicacao publicacao = new Publicacao();

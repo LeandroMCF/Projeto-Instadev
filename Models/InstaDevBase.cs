@@ -10,16 +10,16 @@ namespace Projeto_Instadev.Models
             //Database/Equipe.csv
             string folder = _path.Split("/")[0];//o folder (Pasta) será = Database
 
-            //caso não exista um diretório (pasta),então: 
-            if(!Directory.Exists(folder))
-            {
-                Directory.CreateDirectory(folder);//criar um diretório (pasta)
-            }
-            //caso não exista um arquivo (_path), então :
-            if(!File.Exists(_path))
-            {
-                File.Create(_path);//criar um arquivo (_path)
-            }
+        //caso não exista um diretório (pasta),então: 
+        if(!Directory.Exists(folder))
+        {
+            Directory.CreateDirectory(folder);//criar um diretório (pasta)
+        }
+        //caso não exista um arquivo (_path), então :
+        if(!File.Exists(_path))
+        {
+            File.Create(_path);//criar um arquivo (_path)
+        }
 
         }
         
