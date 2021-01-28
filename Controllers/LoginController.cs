@@ -18,7 +18,7 @@ namespace Projeto_Instadev.Controllers
             Usuario usuarioModel = new Usuario();
             // Lemos todos os arquivos do CSV
 
-            List<string> csv = jogadorModel.ReadAllLinesCSV("Database/Jogador.csv");
+            List<string> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
 
             // Verificamos se as informações passadas existe na lista de string
             var logado = 
@@ -29,13 +29,13 @@ namespace Projeto_Instadev.Controllers
             );
 
             
-            
             if(logado != null)
             {
                 return LocalRedirect("~/");
             }else{
 
             Mensagem = "Dados incorretos, tente novamente...";
+            
             return LocalRedirect("~/Login");
             }
 
