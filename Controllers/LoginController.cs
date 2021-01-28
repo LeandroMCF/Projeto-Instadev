@@ -1,8 +1,7 @@
-
-
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Instadev.Models;
 
 namespace Projeto_Instadev.Controllers
 {
@@ -35,7 +34,7 @@ namespace Projeto_Instadev.Controllers
             }else{
 
             Mensagem = "Dados incorretos, tente novamente...";
-            
+
             return LocalRedirect("~/Login");
             }
 
