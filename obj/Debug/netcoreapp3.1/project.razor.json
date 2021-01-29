@@ -14422,6 +14422,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dev\\Desktop\\Projeto-Instadev\\Views\\Cadastro\\index.cshtml",
+      "TargetPath": "Views\\Cadastro\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dev\\Desktop\\Projeto-Instadev\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
