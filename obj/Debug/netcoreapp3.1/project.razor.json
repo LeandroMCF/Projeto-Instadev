@@ -14430,6 +14430,11 @@
       "FilePath": "c:\\Users\\dev\\Desktop\\Projeto-Instadev\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\dev\\Desktop\\Projeto-Instadev\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
