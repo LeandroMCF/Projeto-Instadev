@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\PC - CARLOS\\.nuget\\packages\\": {}
+    "C:\\Users\\joao\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
+      "projectUniqueName": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
       "projectName": "Projeto-Instadev",
-      "projectPath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
-      "packagesPath": "C:\\Users\\PC - CARLOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\obj\\",
+      "projectPath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
+      "packagesPath": "C:\\Users\\joao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC - CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\joao\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
