@@ -7,7 +7,18 @@ namespace Projeto_Instadev.Models
 {
     public class Usuario : InstaDevBase , IUsuario
     {
-        public int IdUsuario { get; set; }
+        public Usuario(int idUsuario, string nome, string foto, string dataNascimento, string email, string userName, string senha) 
+        {
+            this.IdUsuario = idUsuario;
+                this.Nome = nome;
+                this.Foto = foto;
+                this.DataNascimento = dataNascimento;
+                this.Email = email;
+                this.UserName = userName;
+                this.Senha = senha;
+               
+        }
+                public int IdUsuario { get; set; }
         public string Nome { get; set; }
         public string Foto { get; set; }
         public string DataNascimento { get; set; }        
@@ -82,6 +93,7 @@ namespace Projeto_Instadev.Models
         {
             Random numAleatorio = new Random();
             int id = numAleatorio.Next(100, 999);
+            string[] linhas = File.ReadAllLines(PATH);
             return id;
         }
     }
