@@ -14402,6 +14402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dev\\Desktop\\Projeto-Instadev\\Views\\Feed\\index.cshtml",
+      "TargetPath": "Views\\Feed\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dev\\Desktop\\Projeto-Instadev\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
