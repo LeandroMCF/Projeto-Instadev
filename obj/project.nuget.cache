@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4HHfG8jRcxeKEs9Bz5lAK3j14RsGUSCpeSQsvkezMOvehc0yeboeelT7liMyC0Lijqmd3x+Ko0zr27RxJP+ZWQ==",
+  "dgSpecHash": "sKeEHYy6xGfTtsODipli/EPvPuo/h8y62DvgMLVEUfkqyhr1R9EIfyq9IRxzBNNssSKx+UOu8gvGMaCsS3yHwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\leand\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
