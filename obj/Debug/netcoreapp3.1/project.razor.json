@@ -14397,6 +14397,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Feed\\index.cshtml",
+      "TargetPath": "Views\\Feed\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
