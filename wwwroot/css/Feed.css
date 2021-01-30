@@ -216,10 +216,15 @@ p{
     background-color: #d1d1d1;
     width: auto;
     color: #7d7d7d;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
 }
 #postarImg{
     background-color: #2686CC;
     color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 2.5px;
 }
 /*fim postar*/
 

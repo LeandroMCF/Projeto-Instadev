@@ -42,9 +42,10 @@
                 </div>
             </aside>
         </section>
-
+    </main>
     <!--Fim stories-->
     <!--Postar-->
+    <main>
 
         <section class="postar flex-center-bt">
             <div class="itens">
@@ -53,12 +54,19 @@
                     <h2>Postar</h2>
                 </div>
             </div>
-            <div class="botoes">
-                <input type="text" name="descricao" placeholder="Digite a descrição da imagem...">
-                <a href="#"><h2 id="escolhaImg">Escolha a imagem...</h2></a>
-                <a href="#"><h2 id="postarImg">Postar</h2></a>
-            </div>
+            <form class="botoes">
+                <div>
+                    <input type="text" name="descricao" placeholder="Digite a descriçao da imagem">
+                </div>
+                <div>
+                    <input id="escolhaImg" type="file" name="imagem" placeholder="Escolha a imagem..."/>
+                </div>
+
+                    <button id="postarImg" type="submit">Postar</button>
+            </form>
         </section>
+    </main>
+    <main>
         <section>
             <div class="postagem">
                 <div class="perfil-post">
@@ -70,37 +78,6 @@
                 </div>
                 <div class="imagem-post">
                     <img src="images/post-gabigordo 1.png">
-                </div>
-                <div class="curtir-comentar">
-                    <a id="icon-curtir" href="#"><img src="images/Vector.png"></a>
-                    <a id="icon-comentar" href="#"><img src="images/Comentar.png"></a>
-                    <input type="text" name="comentar" placeholder="Comentar...">
-                </div>
-                <div class="comentarios">
-                    <div class="comentario">
-                        <h2>gabigordo</h2>
-                        <p>Amo vocês</p>
-                    </div>
-                    <div class="comentario">
-                        <h2>Yes_Baby</h2>
-                        <p>Thank you</p>
-                    </div>
-                    <div class="comentario">
-                        <h2>king_pele</h2>
-                        <p>Esses são bons de bola, entende?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="postagem">
-                <div class="perfil-post">
-                    <a href="#"><img src="images/thank-you 2.png" alt="#"></a>
-                    <div class="texto">
-                        <h2>Yes_Baby</h2>
-                        <p>Night City, CP</p>
-                    </div>
-                </div>
-                <div class="imagem-post">
-                    <img src="images/Rectangle 4.png">
                 </div>
                 <div class="curtir-comentar">
                     <a id="icon-curtir" href="#"><img src="images/Vector.png"></a>

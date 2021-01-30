@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -17,7 +18,7 @@ namespace Projeto_Instadev.Models
 
         private string PrepararLinha(Publicacao p)
         {
-            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};{p.Likes}";
+            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda}";
         }
 
         public Publicacao()
@@ -25,11 +26,9 @@ namespace Projeto_Instadev.Models
             CreateFolderAndFile(PATH);
         }
 
-        public void CriarPublicacao()
+        public void CriarPublicacao(Publicacao p)
         {
-            Publicacao publicacao = new Publicacao();
-            Usuario usuario = new Usuario();
-            string[] linha = { PrepararLinha(publicacao) };
+            string[] linha = { PrepararLinha(p) };
             File.AppendAllLines(PATH, linha);
         }
 
@@ -64,6 +63,25 @@ namespace Projeto_Instadev.Models
         {
             List<string> linhas = new List<string>();
             linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
+        }
+        public bool GerarIdPostagem(int id)
+        {
+            bool existe = false;
+            List<string> csv = new List<string>();
+            csv = ReadAllLinesCSV(PATH);
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+                if (id == int.Parse(linha[0]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            return existe;
         }
     }
 }
