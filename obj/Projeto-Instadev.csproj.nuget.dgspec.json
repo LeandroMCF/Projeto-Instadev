@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj": {}
+    "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj": {
+    "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj",
+        "projectUniqueName": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
         "projectName": "Projeto-Instadev",
-        "projectPath": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj",
-        "packagesPath": "C:\\Users\\leand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\obj\\",
+        "projectPath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
+        "packagesPath": "C:\\Users\\PC - CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leand\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\PC - CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -45,12 +45,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
