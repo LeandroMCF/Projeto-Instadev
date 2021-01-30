@@ -85,6 +85,12 @@ namespace Projeto_Instadev.Models
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
+            linhas.RemoveAll(x => x.Split(";")[1] == u.Nome.ToString());
+            linhas.RemoveAll(x => x.Split(";")[2] == u.Foto.ToString());
+            linhas.RemoveAll(x => x.Split(";")[3] == u.DataNascimento.ToString());
+            linhas.RemoveAll(x => x.Split(";")[4] == u.Email.ToString());
+            linhas.RemoveAll(x => x.Split(";")[5] == u.UserName.ToString());
+            linhas.RemoveAll(x => x.Split(";")[6] == u.Senha.ToString());
             linhas.Add( PrepararLinha(u) );                        
             RewriteCSV(PATH, linhas); 
         }
