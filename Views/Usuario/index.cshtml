@@ -1,12 +1,12 @@
-
+@model Usuario
 @{
     ViewData["Title"] = "Home Page";
 }
     <div class="conteiner">
         <div class="cadastro">
-            <img src="images/logo_Instadev_Cadastro.png" alt="Logo">
+            <img src="../images/logo_Instadev_Cadastro.png" alt="Logo">
             <h1>Cadastre-se para ver fotos e <br>vídeos dos seus amigos.</h1>
-            <form action="#">
+            <form action='@Url.Action("Cadastrar")' method="POST">
                 <input type="email" name="email" placeholder="E-Mail"><br>
                 <input type="text" name="nome_completo" placeholder="Nome Completo"><br>
                 <input type="text" name="nome_usuario" placeholder="Nome do Usuário"><br>
@@ -18,7 +18,7 @@
 
         <div class="conectar">
             <h2>Tem uma conta?</h2>
-                <ul">
+                <ul>
                     <li><a href="#">Conecte-se</a></li>
                 </ul>
         </div>
