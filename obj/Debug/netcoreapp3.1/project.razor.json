@@ -14407,6 +14407,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Cadastro\\index.cshtml",
+      "TargetPath": "Views\\Cadastro\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
