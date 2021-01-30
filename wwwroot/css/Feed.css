@@ -42,7 +42,10 @@ a{
 li{
     list-style-type: none;
 }
-
+.container{
+    width: 80%;
+    margin: 100px auto;
+}
 
 
 /*topo*/

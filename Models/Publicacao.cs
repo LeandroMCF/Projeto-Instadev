@@ -13,7 +13,7 @@ namespace Projeto_Instadev.Models
         
         public int Likes { get; set; }
 
-        public string PATH = "Database/publicacao.csv";
+        public const string PATH = "Database/publicacao.csv";
 
         private string PrepararLinha(Publicacao p)
         {
@@ -33,10 +33,10 @@ namespace Projeto_Instadev.Models
             File.AppendAllLines(PATH, linha);
         }
 
-        public List<Publicacao> Ler(string _path)
+        public List<Publicacao> ReadAll()
         {
             List<Publicacao> publicacao = new List<Publicacao>();
-            string[] linhas = File.ReadAllLines(_path);
+            string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
             {

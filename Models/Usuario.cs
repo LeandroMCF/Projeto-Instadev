@@ -88,13 +88,5 @@ namespace Projeto_Instadev.Models
             linhas.Add( PrepararLinha(u) );                        
             RewriteCSV(PATH, linhas); 
         }
-
-        public int GerarId()
-        {
-            Random numAleatorio = new Random();
-            int id = numAleatorio.Next(100, 999);
-            string[] linhas = File.ReadAllLines(PATH);
-            return id;
-        }
     }
 }
