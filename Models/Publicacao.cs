@@ -33,7 +33,7 @@ namespace Projeto_Instadev.Models
             File.AppendAllLines(PATH, linha);
         }
 
-        public List<Publicacao> ListarPublicacao(string _path)
+        public List<Publicacao> Ler(string _path)
         {
             List<Publicacao> publicacao = new List<Publicacao>();
             string[] linhas = File.ReadAllLines(_path);
