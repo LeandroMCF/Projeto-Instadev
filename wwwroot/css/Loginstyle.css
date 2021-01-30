@@ -12,6 +12,7 @@
     --corplaceholder:#AFAFAF;
     --corborda:#DCDCDC;
     --fundo:#E5E5E5;
+    --erro:#8134AF;
 }
 body{
     color:var(--fundo);
@@ -105,6 +106,9 @@ a{
 .aplicativos{
     display:flex;
     justify-content:center;
+}
+.erro{
+    color: var(--erro);
 }
 
 
