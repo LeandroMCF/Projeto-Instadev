@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Projeto_Instadev.Controllers
 {
-    [Route("Publicacao")]
+    [Route("Publicacacao")]
     public class PublicacaoController : Controller
     {
         Publicacao publi = new Publicacao();
@@ -38,33 +38,35 @@ namespace Projeto_Instadev.Controllers
         public IActionResult Cadastrar(IFormCollection form)
         {
             Publicacao publicacao = new Publicacao();
-            publicacao.IdPublicacao = GerarId();
             publicacao.Legenda = form["descricao"];
-            if (form.Files.Count > 0)
+            publicacao.IdPublicacao = GerarId();
+            if(form.Files.Count > 0)
             {
-                var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Publicacao");
-                if (!Directory.Exists(folder))
-                {
+                // Upload Início
+                var file    = form.Files[0];
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/publicacao");
+
+                if(!Directory.Exists(folder)){
                     Directory.CreateDirectory(folder);
                 }
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", folder, file.FileName);
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    file.CopyTo(stream);
+                
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))  
+                {  
+                    file.CopyTo(stream);  
                 }
-
-                publicacao.Imagem = file.FileName;
+                publicacao.Imagem   = file.FileName;                
             }
             else
             {
-                publicacao.Imagem = "padrão.png";
+                publicacao.Imagem   = "padrao.png";
             }
-
             publi.CriarPublicacao(publicacao);
             ViewBag.Publicacao = publi.ReadAll();
 
-            return LocalRedirect("~/Equipe");
+            return LocalRedirect("~/Publicacao");
         }
+
+
     }
 }

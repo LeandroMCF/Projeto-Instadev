@@ -18,7 +18,7 @@ namespace Projeto_Instadev.Models
 
         private string PrepararLinha(Publicacao p)
         {
-            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda}";
+            return $"{p.IdPublicacao};{p.Legenda};{p.Imagem}";
         }
 
         public Publicacao()
@@ -42,10 +42,9 @@ namespace Projeto_Instadev.Models
                 string[] linha = item.Split(";");
 
                 Publicacao publi = new Publicacao();
-                publi.IdPublicacao = int.Parse(linha[1]);
-                publi.Imagem = linha [2];
-                publi.Legenda = linha [3];
-                publi.Likes = int.Parse(linha [4]);
+                publi.IdPublicacao = int.Parse(linha[0]);
+                publi.Imagem = linha [1];
+                publi.Legenda = linha [2];
                 publicacao.Add(publi);
             }
             return publicacao;
