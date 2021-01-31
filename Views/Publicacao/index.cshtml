@@ -1,0 +1,106 @@
+@{
+    ViewData["Title"] = "Feed";
+}
+<div class="container">
+    <main>
+        <section class="config-stories">
+            <div class="stories flex-center-bt">
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/vin-diesel.png" alt="#"></a>
+                    <p>Vin_Disel</p>
+                </div>
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/gabigordo 1.png" alt="#"></a>
+                    <p>gabigordo</p>
+                </div>
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/will-baiano 1.png" alt="#"></a>
+                    <p>Will_Baiano</p>
+                </div>
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/tony_stark 1.png" alt="#"></a>
+                    <p>Adriano_Stark</p>
+                </div>
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/pele 1.png" alt="#"></a>
+                    <p>King_Pele</p>
+                </div>
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/samuel-rosa-bebê 1.png" alt="#"></a>
+                    <p>Samuel_Rosa</p>
+                </div>
+                <div class="perfil-stories">
+                    <a href="#"><img src="../images/chaves_metal 1.png" alt="#"></a>
+                    <p>Chaves_Metal</p>
+                </div>
+            </div>
+            <aside class="perfil-lateral">
+                <a href="#"><img src="../images/thank-you 2.png"></a>
+                <div class="texto">
+                    <h2>Yes_Baby</h2>
+                    <p>Marcos Jeeves</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <!--Fim stories-->
+    <!--Postar-->
+    <main>
+
+        <section class="postar flex-center-bt">
+            <div class="itens">
+                <img src="../images/thank-you 2.png">
+                <div class="texto">
+                    <h2>Postar</h2>
+                </div>
+            </div>
+            <form action='@Url.Action("Cadastrar")' class="botoes">
+
+                <div>
+                    <input type="text" name="descricao" placeholder="Digite a descriçao da imagem">
+                </div>
+
+                <div>
+                    <input id="escolhaImg" type="file" name="imagem" placeholder="Escolha a imagem..." required/>
+                </div>
+
+                    <button id="postarImg" type="submit">Postar</button>
+            </form>
+        </section>
+    </main>
+    <main>
+        <section>
+            <div class="postagem">
+                <div class="perfil-post">
+                    <a href="#"><img src="../images/gabigordo 1.png" alt="#"></a>
+                    <div class="texto">
+                        <h2>gabigordo</h2>
+                        <p>Flamengo, Rj</p>
+                    </div>
+                </div>
+                <div class="imagem-post">
+                    <img src="../images/post-gabigordo 1.png">
+                </div>
+                <div class="curtir-comentar">
+                    <a id="icon-curtir" href="#"><img src="../images/Vector.png"></a>
+                    <a id="icon-comentar" href="#"><img src="../images/Comentar.png"></a>
+                    <input type="text" name="comentar" placeholder="Comentar...">
+                </div>
+                <div class="comentarios">
+                    <div class="comentario">
+                        <h2>gabigordo</h2>
+                        <p>Amo vocês</p>
+                    </div>
+                    <div class="comentario">
+                        <h2>Yes_Baby</h2>
+                        <p>Thank you</p>
+                    </div>
+                    <div class="comentario">
+                        <h2>king_pele</h2>
+                        <p>Esses são bons de bola, entende?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
