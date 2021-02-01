@@ -32,8 +32,8 @@ body{
 .box img{
     width:165px;
     height:83px;
-    margin-top:24px;
-    margin-left:88px;
+    margin:24px 0 0 88px;
+       
 }
 .box p{
     text-align:center;
@@ -41,44 +41,38 @@ body{
     margin-bottom:30px;
     
 }
-form{
-    margin-top:0;
+.log{
+    margin: 10px 0 9px 38px;
+    /*top right bottom left*/
 }
 
-input{
-    border:1px solid var(--corborda);
-    border-radius:2px;
-    background-color: var(--corinput);
-    color:var(--corplaceholder);
-    margin-bottom:9px;
-}
-.stripe{
+input[type="email"], input[type="password"]{
     font-size:11px;
     padding-left:12px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-left:38px;
-    margin-right:38px;
+    margin-bottom:9px;
     border-radius:2px;
-    margin-bottom:9x;
     width:267px;
+    border:1px solid var(--corborda);
+    background-color: var(--corinput);
+    color:var(--corplaceholder);
 }
 
-button{
+.gradient-btn{
     
     border-radius:2px;
     background-color:var(--azul);
-    padding-top:10px;
-    padding-left:0;
+    padding:10px 0 10px 0;
     margin-top:10px;
-    padding-bottom:10px;
     font-size:12px;
     font-weight:bold;
     color:white;
+    width:267px;
     border:1px solid transparent;
     cursor:pointer;
 }
-a{
+.forget a,.below a{
     text-decoration:none;
     color:var(--azul);
     
@@ -98,7 +92,6 @@ a{
     color:black;
     display:block;
     text-align:center;
-    padding-left:-38px;
     font-size:11.5px;
 }
 .final img{

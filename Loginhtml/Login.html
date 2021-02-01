@@ -12,18 +12,29 @@
     <section>
         <div class="box">
             <img src="images/Instadev.svg" alt="Imagem do Logo Instadev">
-            <form>
-                <input class="stripe" type="email" name="Email" placeholder="Email..."><br>
-                <input class="stripe" type="password" name="Senha" placeholder="Senha..."><br>
-                <button class="stripe" type="submit" name="Botao">Enviar</button>
+
+            <form  method="POST" class="log" action="#" >
+
+                <div class="field">
+                <input type="email" name="Email" placeholder="Email...">
+                </div>
+
+                <div class="field">
+                <input type="password" name="Senha" placeholder="Senha...">
+                </div>
+                
+                <button class="gradient-btn" type="submit" name="Botao">Enviar</button>
+                
             </form>
 
-            <p style="font-variant:small-caps;margin-top:32px;">__________________   ou   _________________</p>
+            <div class="forget">
+            <p style="font-variant:small-caps;margin-top:20px;">__________________   ou   _________________</p>
             <p style="font-size:11px;"><a href="#" alt="">Esqueceu a senha ?</a></p>
+            </div>
         </div>
 
         <div class="below">
-            <p>Não tem uma conta? <a id="cadastro" href="cadastro.html" target="blank" alt=""><b>Cadastre-se.</b></a></p>
+            <p>Não tem uma conta? <a id="cadastro" href="Cadastro.html" alt="Cadastre-se"><b>Cadastre-se.</b></a></p>
         </div>
         <div class="final">
             <p>Obtenha o aplicativo</p>
