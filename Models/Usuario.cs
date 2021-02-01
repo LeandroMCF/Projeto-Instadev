@@ -9,7 +9,7 @@ namespace Projeto_Instadev.Models
     {
         public Usuario(int idUsuario, string nome, string foto, string dataNascimento, string email, string userName, string senha) 
         {
-            this.IdUsuario = idUsuario;
+                this.IdUsuario = idUsuario;
                 this.Nome = nome;
                 this.Foto = foto;
                 this.DataNascimento = dataNascimento;
