@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="cadastro">
+            <img src="../images/Instadev.jpg" alt="Logo">
+            <h1>Cadastre-se para ver fotos e <br>vídeos dos seus amigos.</h1>
+            <form action='@Url.Action("Cadastrar")' method="POST" enctype="multipart/form-data">
+                <input type="email" name="Email" placeholder="E-Mail"><br>
+                <input type="text" name="nome_completo" placeholder="Nome Completo"><br>
+                <input type="text" name="nome_usuario" placeholder="Nome do Usuário"><br>
+                <input type="password" name="Senha" placeholder="Senha"><br>
+                <button id="cadastrar" type="submit" name="Botao">Cadastrar</button>
+            </form>
+            <h2>Ao se cadastrar, você concorda com nossos<br>Termos, Política de Dados e Política de Cookies.</h2>
+        </div>
+
+        <div class="conectar">
+            <h2>Tem uma conta?</h2>
+                <ul>
+                    <li><a href="#">Conecte-se</a></li>
+                </ul>
+        </div>
+
+        <p class="text_app">Obtenha o aplicativo.</p>
+        
+        <div class="apps">
+            <img src="../images/app_store 1.jpg" alt="logo app store">
+            <img src="../images/google_play 1.jpg" alt="logo google play">
+        </div>
+        
+    </div>
+</body>
+</html>
