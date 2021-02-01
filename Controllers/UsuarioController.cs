@@ -1,7 +1,8 @@
 using System;
+using System.IO;
+using Projeto_Instadev.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Projeto_Instadev.Models;
 
 namespace Projeto_Instadev.Controllers
 {
@@ -26,6 +27,7 @@ namespace Projeto_Instadev.Controllers
             int id = numAleatorio.Next(100, 999);
 
             usuarioModel.GerarIdUsuario(id);
+            
             while (usuarioModel.GerarIdUsuario(id))
             {
                 id = numAleatorio.Next(100, 999);
