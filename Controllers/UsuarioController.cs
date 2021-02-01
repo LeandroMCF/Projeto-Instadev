@@ -10,19 +10,37 @@ namespace Projeto_Instadev.Controllers
     {
         Usuario usuarioModel = new Usuario();
         
+
+        [Route("Listar")]
         public IActionResult Index()
         {
-            
             ViewBag.Usuarios = usuarioModel.ReadAll();
             return View();
         }
+
+
+        public int GerarId()
+        {
+            Random numAleatorio = new Random();
+
+            int id = numAleatorio.Next(100, 999);
+
+            usuarioModel.GerarIdUsuario(id);
+            while (usuarioModel.GerarIdUsuario(id))
+            {
+                id = numAleatorio.Next(100, 999);
+                usuarioModel.GerarIdUsuario(id);
+            }
+            return id;
+        }
+        
 
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
             Usuario novoUsuario     = new Usuario();
 
-            novoUsuario.IdUsuario   = Int32.Parse(form["IdUsuario"]);
+            novoUsuario.IdUsuario   = GerarId();
             novoUsuario.Nome        = form["Nome"];
             novoUsuario.Foto        = form["Foto"];
             novoUsuario.DataNascimento = form["DataNascimento"];
@@ -35,8 +53,5 @@ namespace Projeto_Instadev.Controllers
 
             return LocalRedirect("~/Usuario");
         }
-
-        
-
     }
 }

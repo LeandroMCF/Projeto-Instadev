@@ -85,22 +85,32 @@ namespace Projeto_Instadev.Models
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
-            linhas.RemoveAll(x => x.Split(";")[1] == u.Nome.ToString());
-            linhas.RemoveAll(x => x.Split(";")[2] == u.Foto.ToString());
-            linhas.RemoveAll(x => x.Split(";")[3] == u.DataNascimento.ToString());
-            linhas.RemoveAll(x => x.Split(";")[4] == u.Email.ToString());
-            linhas.RemoveAll(x => x.Split(";")[5] == u.UserName.ToString());
-            linhas.RemoveAll(x => x.Split(";")[6] == u.Senha.ToString());
             linhas.Add( PrepararLinha(u) );                        
             RewriteCSV(PATH, linhas); 
         }
 
-        public int GerarId()
+        public bool GerarIdUsuario(int id)
         {
-            Random numAleatorio = new Random();
-            int id = numAleatorio.Next(100, 999);
-            string[] linhas = File.ReadAllLines(PATH);
-            return id;
+            bool existe = false;
+
+            List<string> csv = new List<string>();
+
+            csv = ReadAllLinesCSV(PATH);
+
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+                
+                if (id == int.Parse(linha[0]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            return existe;
         }
     }
 }
