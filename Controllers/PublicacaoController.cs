@@ -55,11 +55,11 @@ namespace Projeto_Instadev.Controllers
                 {  
                     file.CopyTo(stream);  
                 }
-                publicacao.Imagem   = file.FileName;                
+                publicacao.Imagem  = file.FileName;                
             }
             else
             {
-                publicacao.Imagem   = "padrao.png";
+                publicacao.Imagem  = "padrao.png";
             }
             publi.CriarPublicacao(publicacao);
             ViewBag.Publicacao = publi.ReadAll();
