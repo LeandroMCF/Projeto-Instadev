@@ -53,6 +53,7 @@ namespace Projeto_Instadev.Models
         public void Editarpublicacao(Publicacao p)
         {
             List<string> linhas = new List<string>();
+            linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
             linhas.Add( PrepararLinha(p) );
             RewriteCSV(PATH, linhas);

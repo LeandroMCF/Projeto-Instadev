@@ -34,7 +34,7 @@ namespace Projeto_Instadev.Controllers
         }
 
 
-        [Route("Cadastrar")]
+        [Route("Publicar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
             Publicacao publicacao = new Publicacao();
