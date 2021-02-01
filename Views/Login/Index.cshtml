@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "Login";
 }
+
 <div class="titulo_pagina">
     <h1>@ViewData["Title"]</h1>
 </div>
@@ -9,7 +10,7 @@
         <div class="box">
             <img src="images/Instadev.svg" alt="Imagem do Logo Instadev">
 
-            <form  method="POST" class="log" action="Index" >
+            <form  method="POST" class="log" action='@Url.Action("Logar")'>
 
                 <div class="field">
                 <input type="email" name="Email" placeholder="Email...">
