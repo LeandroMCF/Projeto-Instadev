@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Projeto_Instadev.Controllers
 {
-    [Route("Publicacacao")]
+    [Route("Publicacao")]
     public class PublicacaoController : Controller
     {
         Publicacao publi = new Publicacao();
@@ -64,7 +64,7 @@ namespace Projeto_Instadev.Controllers
             publi.CriarPublicacao(publicacao);
             ViewBag.Publicacao = publi.ReadAll();
 
-            return LocalRedirect("~/Publicacao");
+            return LocalRedirect("~/Publicacao/Listar");
         }
 
 
