@@ -43,8 +43,8 @@ namespace Projeto_Instadev.Models
 
                 Publicacao publi = new Publicacao();
                 publi.IdPublicacao = int.Parse(linha[0]);
-                publi.Imagem = linha [1];
-                publi.Legenda = linha [2];
+                publi.Legenda = linha [1];
+                publi.Imagem = linha [2];
                 publicacao.Add(publi);
             }
             return publicacao;
