@@ -7,18 +7,7 @@ namespace Projeto_Instadev.Models
 {
     public class Usuario : InstaDevBase , IUsuario
     {
-        public Usuario(int idUsuario, string nome, string foto, string dataNascimento, string email, string userName, string senha) 
-        {
-            this.IdUsuario = idUsuario;
-                this.Nome = nome;
-                this.Foto = foto;
-                this.DataNascimento = dataNascimento;
-                this.Email = email;
-                this.UserName = userName;
-                this.Senha = senha;
-               
-        }
-                public int IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
         public string Nome { get; set; }
         public string Foto { get; set; }
         public string DataNascimento { get; set; }        
@@ -27,6 +16,12 @@ namespace Projeto_Instadev.Models
         public string Senha { get; set; }
 
         public string PATH = "Database/Usuario.csv";
+
+        //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
+        private string PrepararLinha(Usuario u)
+        {
+            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
+        }
 
         public Usuario()
         {
@@ -38,21 +33,6 @@ namespace Projeto_Instadev.Models
         {
             string[] linha = { PrepararLinha(u) };
             File.AppendAllLines(PATH, linha);
-        }
-
-        //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
-        private string PrepararLinha(Usuario u)
-        {
-            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
-        }
-
-        //Método para deletar um usuário
-        public void Delete(int idUsuario)
-        {
-            List<string> linhas = ReadAllLinesCSV(PATH);
-            // 1;FLA;fla.png
-            linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
-            RewriteCSV(PATH, linhas);
         }
 
         //Método para ler os usuários
@@ -85,21 +65,55 @@ namespace Projeto_Instadev.Models
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
-            linhas.RemoveAll(x => x.Split(";")[1] == u.Nome.ToString());
-            linhas.RemoveAll(x => x.Split(";")[2] == u.Foto.ToString());
-            linhas.RemoveAll(x => x.Split(";")[3] == u.DataNascimento.ToString());
-            linhas.RemoveAll(x => x.Split(";")[4] == u.Email.ToString());
-            linhas.RemoveAll(x => x.Split(";")[5] == u.UserName.ToString());
-            linhas.RemoveAll(x => x.Split(";")[6] == u.Senha.ToString());
             linhas.Add( PrepararLinha(u) );                        
             RewriteCSV(PATH, linhas); 
         }
 
-        public int GerarId()
+
+        //Método para deletar um usuário
+        public void Delete(int idUsuario)
         {
-            Random numAleatorio = new Random();
-            int id = numAleatorio.Next(100, 999);
-            return id;
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            // 1;FLA;fla.png
+            linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
+            RewriteCSV(PATH, linhas);
+        }
+
+
+
+        public bool GerarIdUsuario(int id)
+        {
+            bool existe = false;
+
+            List<string> csv = new List<string>();
+
+            csv = ReadAllLinesCSV(PATH);
+
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+                
+                if (id == int.Parse(linha[0]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            return existe;
         }
     }
 }
+        // public Usuario(int idUsuario, string nome, string foto, string dataNascimento, string email, string userName, string senha) 
+        // {
+        //         this.IdUsuario = idUsuario;
+        //         this.Nome = nome;
+        //         this.Foto = foto;
+        //         this.DataNascimento = dataNascimento;
+        //         this.Email = email;
+        //         this.UserName = userName;
+        //         this.Senha = senha;
+               
+        // }
