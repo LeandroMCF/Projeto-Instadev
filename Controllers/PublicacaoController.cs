@@ -38,8 +38,8 @@ namespace Projeto_Instadev.Controllers
         public IActionResult Cadastrar(IFormCollection form)
         {
             Publicacao publicacao = new Publicacao();
-            publicacao.Legenda = form["descricao"];
             publicacao.IdPublicacao = GerarId();
+            publicacao.Legenda = form["descricao"];
             if(form.Files.Count > 0)
             {
                 // Upload Início
