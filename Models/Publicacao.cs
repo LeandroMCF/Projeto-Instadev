@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -13,11 +14,11 @@ namespace Projeto_Instadev.Models
         
         public int Likes { get; set; }
 
-        public string PATH = "Database/publicacao.csv";
+        public const string PATH = "Database/publicacao.csv";
 
         private string PrepararLinha(Publicacao p)
         {
-            return $"{p.IdPublicacao};{p.Imagem};{p.Legenda};{p.Likes}";
+            return $"{p.IdPublicacao};{p.Legenda};{p.Imagem}";
         }
 
         public Publicacao()
@@ -25,28 +26,25 @@ namespace Projeto_Instadev.Models
             CreateFolderAndFile(PATH);
         }
 
-        public void CriarPublicacao()
+        public void CriarPublicacao(Publicacao p)
         {
-            Publicacao publicacao = new Publicacao();
-            Usuario usuario = new Usuario();
-            string[] linha = { PrepararLinha(publicacao) };
+            string[] linha = { PrepararLinha(p) };
             File.AppendAllLines(PATH, linha);
         }
 
-        public List<Publicacao> ListarPublicacao(string _path)
+        public List<Publicacao> ReadAll()
         {
             List<Publicacao> publicacao = new List<Publicacao>();
-            string[] linhas = File.ReadAllLines(_path);
+            string[] linhas = File.ReadAllLines(PATH);
 
             foreach (var item in linhas)
             {
                 string[] linha = item.Split(";");
 
                 Publicacao publi = new Publicacao();
-                publi.IdPublicacao = int.Parse(linha[1]);
-                publi.Imagem = linha [2];
-                publi.Legenda = linha [3];
-                publi.Likes = int.Parse(linha [4]);
+                publi.IdPublicacao = int.Parse(linha[0]);
+                publi.Imagem = linha [1];
+                publi.Legenda = linha [2];
                 publicacao.Add(publi);
             }
             return publicacao;
@@ -64,6 +62,25 @@ namespace Projeto_Instadev.Models
         {
             List<string> linhas = new List<string>();
             linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
+        }
+        public bool GerarIdPostagem(int id)
+        {
+            bool existe = false;
+            List<string> csv = new List<string>();
+            csv = ReadAllLinesCSV(PATH);
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+                if (id == int.Parse(linha[0]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            return existe;
         }
     }
 }

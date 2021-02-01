@@ -12,8 +12,6 @@ namespace Projeto_Instadev.Controllers
         
         public IActionResult Index()
         {
-            
-            ViewBag.Usuarios = usuarioModel.ReadAll();
             return View();
         }
 

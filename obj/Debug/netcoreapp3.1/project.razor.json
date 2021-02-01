@@ -14392,13 +14392,13 @@
   "RootNamespace": "Projeto_Instadev",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Views\\Feed\\index.cshtml",
-      "TargetPath": "Views\\Feed\\index.cshtml",
+      "FilePath": "c:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Views\\Publicacao\\index.cshtml",
+      "TargetPath": "Views\\Publicacao\\index.cshtml",
       "FileKind": "mvc"
     },
     {

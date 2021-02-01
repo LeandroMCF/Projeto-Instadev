@@ -99,7 +99,6 @@ namespace Projeto_Instadev.Models
         {
             Random numAleatorio = new Random();
             int id = numAleatorio.Next(100, 999);
-            string[] linhas = File.ReadAllLines(PATH);
             return id;
         }
     }
