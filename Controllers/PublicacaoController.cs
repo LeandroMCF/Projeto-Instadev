@@ -11,12 +11,14 @@ namespace Projeto_Instadev.Controllers
     public class PublicacaoController : Controller
     {
         Publicacao publi = new Publicacao();
+        Comentario comentario = new Comentario();
 
         [Route("Listar")]
 
         public IActionResult Index()
         {
             ViewBag.Publicacao = publi.ReadAll();
+            ViewBag.Comentarios = comentario.ReadAll();
             return View();
         }
 
@@ -71,6 +73,20 @@ namespace Projeto_Instadev.Controllers
             ViewBag.Publicacao = publi.ReadAll();
             
             return LocalRedirect("~/Publicacao/Listar");
+        }
+
+
+        [Route("Comentar")]
+        public IActionResult Comentar(IFormCollection form)
+        {
+            Comentario coment = new Comentario();
+            coment.IdComentario = GerarId();
+            coment.Mensagem = form["comentar"];
+
+            comentario.CriarComentario(coment);
+            ViewBag.Comentarios = comentario.ReadAll();
+
+            return Redirect("~/Publicacao/Listar");
         }
     }
 }
