@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\prado\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\prado\\.nuget\\packages"
+    ]
+  }
+}

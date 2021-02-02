@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Loginstyle.css">
-    <title>Login</title>
-</head>
+@{
+    ViewData["Title"] = "Login";
+}
 
-<body>
-  
-    <section>
+<div class="titulo_pagina">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<section>
         <div class="box">
             <img src="images/Instadev.svg" alt="Imagem do Logo Instadev">
 
-            <form  method="POST" class="log" action="#" >
+            <form  method="POST" class="log" action='@Url.Action("Logar")'>
 
                 <div class="field">
                 <input type="email" name="Email" placeholder="Email...">
@@ -34,15 +31,13 @@
         </div>
 
         <div class="below">
-            <p>Não tem uma conta? <a id="cadastro" href="#" alt="Cadastre-se"><b>Cadastre-se.</b></a></p>
+            <p>Não tem uma conta? <a id="cadastro" asp-area=""  asp-controller="Usuario"  asp-action="Index"><b>Cadastre-se.</b></a></p>
         </div>
         <div class="final">
             <p>Obtenha o aplicativo</p>
             <div class="aplicativos">
-                <a href="#" alt=""><img src="images/app_store 1.jpg" alt=""></a><a href="#" alt=""><img src="images/google_play 1.jpg" alt=""></a>
+                <a href="#" alt=""><img src="~/images/app_store 1.jpg" alt=""></a><a href="#" alt=""><img src="~/images/google_play 1.jpg" alt=""></a>
             </div>
         </div>
     </section>
-</body>
-
-</html>
+    <i class="erro">@TempData.Peek("Mensagem")</i>
