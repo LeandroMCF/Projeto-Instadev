@@ -43,8 +43,8 @@ namespace Projeto_Instadev.Models
 
                 Publicacao publi = new Publicacao();
                 publi.IdPublicacao = int.Parse(linha[0]);
-                publi.Imagem = linha [1];
-                publi.Legenda = linha [2];
+                publi.Legenda = linha [1];
+                publi.Imagem = linha [2];
                 publicacao.Add(publi);
             }
             return publicacao;
@@ -53,6 +53,7 @@ namespace Projeto_Instadev.Models
         public void Editarpublicacao(Publicacao p)
         {
             List<string> linhas = new List<string>();
+            linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
             linhas.Add( PrepararLinha(p) );
             RewriteCSV(PATH, linhas);

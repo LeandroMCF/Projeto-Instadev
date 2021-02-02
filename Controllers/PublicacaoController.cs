@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Projeto_Instadev.Controllers
 {
-    [Route("Publicacacao")]
+    [Route("Publicacao")]
     public class PublicacaoController : Controller
     {
         Publicacao publi = new Publicacao();
@@ -34,12 +34,12 @@ namespace Projeto_Instadev.Controllers
         }
 
 
-        [Route("Cadastrar")]
+        [Route("Publicar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
             Publicacao publicacao = new Publicacao();
-            publicacao.Legenda = form["descricao"];
             publicacao.IdPublicacao = GerarId();
+            publicacao.Legenda = form["descricao"];
             if(form.Files.Count > 0)
             {
                 // Upload Início
@@ -55,16 +55,16 @@ namespace Projeto_Instadev.Controllers
                 {  
                     file.CopyTo(stream);  
                 }
-                publicacao.Imagem   = file.FileName;                
+                publicacao.Imagem  = file.FileName;                
             }
             else
             {
-                publicacao.Imagem   = "padrao.png";
+                publicacao.Imagem  = "padrao.png";
             }
             publi.CriarPublicacao(publicacao);
             ViewBag.Publicacao = publi.ReadAll();
 
-            return LocalRedirect("~/Publicacao");
+            return LocalRedirect("~/Publicacao/Listar");
         }
 
 
