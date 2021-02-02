@@ -40,8 +40,7 @@ namespace Projeto_Instadev.Models
             File.AppendAllLines(PATH, linha);
         }
 
-<<<<<<< HEAD
-=======
+
         //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
         private string PrepararLinha(Usuario u)
         {
@@ -56,8 +55,6 @@ namespace Projeto_Instadev.Models
             linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
             RewriteCSV(PATH, linhas);
         }
-
->>>>>>> 70f7a3ab2839b0e109e87bbc161626969fc81f3d
         //Método para ler os usuários
         public List<Usuario> ReadAll()
         {
