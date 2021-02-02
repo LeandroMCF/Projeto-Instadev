@@ -3,6 +3,8 @@
     --backgroundbox: #FFFFFF;
     --corbotao: #2686CC;
 
+    --mainfont: 14px;
+    --subfont: 12px;
     --font: 'Segoe UI';
     --subtextocor: #909090;
 }
@@ -29,7 +31,7 @@ body{
 .container{
     max-width: 900px;
     width: 100%;
-    max-height: 610px;
+    max-height: 600px;
     height: 100%;
     display: flex;
     background-color: var(--backgroundbox);
@@ -54,9 +56,29 @@ body{
 }
 
 .content_perfil{
-    justify-content: center;
     display: flex;
-    width: 75%;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    margin-top: 1.5%;
+}
+
+.content_perfil p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content_perfil a{
+    font-size: var(--subfont);
+    color: var(--corbotao);
+    text-decoration: none;
+}
+
+.content_perfil_foto{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 46%;
     margin-top: 2.5%;
 }
 
@@ -68,17 +90,39 @@ body{
     font-size: 1.1em;
 }
 
-.content_texto p{
-    font-size: 0.875em;
+.content_texto a{
     color: var(--corbotao);
+    text-decoration: none;
+    font-size: var(--mainfont);
+    font-weight: 600;
 }
-
 .caixa{
     width: 354px;
     height: 30px;
+    border-radius: 2px;
+    border: 1px solid #909090;
+    margin-left: 20px;
 }
 
-/* Butão */
+.label{
+    text-align: right;
+}
+
+
+.subtexto{
+    color: var(--subtextocor);
+    padding-left: 27.6%;
+    margin-top: 1%;
+}
+
+.subtexto p{
+    font-size: var(--subfont);
+}
+.titulo{
+    font-weight: 600;
+}
+
+/* Botão */
 
 .button {
     background-color: var(--corbotao);
@@ -89,8 +133,15 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    padding: 15px 33px;
+    width: 66px;
+    height: 30px;
+    margin-right: 15.5%;
 }
+
+.button p{
+    padding-top: 5px;
+}
+
 /*Contéudo aside*/
 .editar_content{
     width: 70%;
@@ -98,7 +149,7 @@ body{
     border-left: 2px solid black;
 }
 .editar_content p{
-    font-size: 0.9375em;
+    font-size: var(--mainfont);
     font-weight: 600;
 }
 
