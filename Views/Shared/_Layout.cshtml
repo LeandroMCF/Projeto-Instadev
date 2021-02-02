@@ -5,24 +5,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Projeto_Instadev</title> 
+        @switch (ViewData["Title"].ToString())
 
-    @switch (ViewData["Title"].ToString())
-    {
-        case "Feed":
-            <link rel="stylesheet" href="~/css/Feed.css"/>
-        break;
+        {
+            case "Feed":
+                <link rel="stylesheet" href="~/css/Feed.css"/>
+            break;
 
-        case "Cadastro":
-            <link rel="stylesheet" href="~/css/usuario.css"/>
-        break;
+            case "Cadastro":
+                <link rel="stylesheet" href="~/css/usuario.css"/>
+            break;
 
-        case "Login":
-            <link rel="stylesheet" href="~/css/Loginstyle.css"/>
-        break;
-    }
+            case "Login":
+                <link rel="stylesheet" href="~/css/Loginstyle.css"/>
+            break;
+        }
         @* <link rel="stylesheet" href="~/css/paginaperfil.css"/>
         <link rel="stylesheet" href="~/css/editperfil.css"/> *@
-
 </head>
 <body>
     <header>
@@ -30,11 +29,9 @@
             <div class="menu">
 
                 <a href="#">
-
                     <img class="logo" src="../images/logo_Instadev.png" alt="Logo do site InstaDev">
 
                     <img class="logo" src="~/images/logo_Instadev.png" alt="Logo do site InstaDev">
-
                 </a>
                 
                 <form class="barra" action="#">

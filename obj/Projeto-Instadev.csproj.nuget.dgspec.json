@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj": {}
+    "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj": {
+    "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
+        "projectUniqueName": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj",
         "projectName": "Projeto-Instadev",
-        "projectPath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
-        "packagesPath": "C:\\Users\\joao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\obj\\",
+        "projectPath": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj",
+        "packagesPath": "C:\\Users\\leand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joao\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-    "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
-        "projectName": "Projeto-Instadev",
-        "projectPath": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
-        "packagesPath": "C:\\Users\\DiomipcdoLeonidas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\DiomipcdoLeonidas\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> FPagPerfil
+          "C:\\Users\\leand\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -62,6 +45,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
