@@ -44,7 +44,7 @@ namespace Projeto_Instadev.Models
         private string PrepararLinha(Usuario u)
         {
             return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
-        }
+        }   
 
         //Método para deletar um usuário
         public void Delete(int idUsuario)
