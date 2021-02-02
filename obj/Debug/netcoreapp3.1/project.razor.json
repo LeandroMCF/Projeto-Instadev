@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
+  "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Projeto-Instadev.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,43 +14392,43 @@
   "RootNamespace": "Projeto_Instadev",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Feed\\index.cshtml",
-      "TargetPath": "Views\\Feed\\index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Feed\\index.cshtml",
+      "TargetPath": "Views\\Feed\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     }
   ],
