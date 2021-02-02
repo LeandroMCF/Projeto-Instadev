@@ -63,6 +63,14 @@ namespace Projeto_Instadev.Controllers
             return LocalRedirect("~/Publicacao/Listar");
         }
 
+        [Route("Publicacao/{id}")]
 
+        public IActionResult Excluir(int id)
+        {
+            publi.ExcluirPublicacao(id);
+            ViewBag.Publicacao = publi.ReadAll();
+            
+            return LocalRedirect("~/Publicacao/Listar");
+        }
     }
 }

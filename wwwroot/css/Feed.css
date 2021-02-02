@@ -172,6 +172,13 @@ p{
     margin-top: 38px;
     flex-direction: column;
 }
+.excluir{
+    
+    text-decoration: none;
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+}
 .itens{
     width: 100%;
     display: flex;
@@ -333,6 +340,8 @@ p{
     border-width: 1px;
     border-color: #f1f1f1;
     margin-top: 5px;
+    bottom: 0;
+    position: fixed;
 }
 .rodape h2{
     font-size: 14px;

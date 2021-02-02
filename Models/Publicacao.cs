@@ -59,10 +59,12 @@ namespace Projeto_Instadev.Models
             RewriteCSV(PATH, linhas);
         }
 
-        public void ExcluirPublicacao(Publicacao p)
+        public void ExcluirPublicacao(int id)
         {
             List<string> linhas = new List<string>();
-            linhas.RemoveAll(x => x.Split(";")[0] == p.IdPublicacao.ToString());
+            linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            RewriteCSV(PATH, linhas);
         }
         public bool GerarIdPostagem(int id)
         {
