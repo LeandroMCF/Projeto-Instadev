@@ -57,10 +57,6 @@ namespace Projeto_Instadev.Controllers
                 }
                 publicacao.Imagem  = file.FileName;                
             }
-            else
-            {
-                publicacao.Imagem  = "padrao.png";
-            }
             publi.CriarPublicacao(publicacao);
             ViewBag.Publicacao = publi.ReadAll();
 
