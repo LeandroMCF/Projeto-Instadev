@@ -85,5 +85,14 @@ namespace Projeto_Instadev.Models
             }
             return existe;
         }
+        public int ProcurandoId(int id)
+        {
+            Comentario comentario = new Comentario();
+            Publicacao publicacao = new Publicacao();
+            List<Comentario> csv = comentario.ReadAll();
+            Comentario id2 = csv.Find(x => x.Split(";")[0] == id.ToString());
+            
+            return id2.IdPublicacao;
+        }
     }
 }

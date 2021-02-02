@@ -79,10 +79,11 @@ namespace Projeto_Instadev.Controllers
         [Route("Comentar")]
         public IActionResult Comentar(IFormCollection form)
         {
+            Publicacao publicacao = new Publicacao();
             Comentario coment = new Comentario();
             coment.IdComentario = GerarId();
-            coment.Mensagem = form["comentar"];
 
+            coment.Mensagem = form["comentar"];
             comentario.CriarComentario(coment);
             ViewBag.Comentarios = comentario.ReadAll();
 
