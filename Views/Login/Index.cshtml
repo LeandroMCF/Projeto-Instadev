@@ -1,3 +1,43 @@
 @{
     ViewData["Title"] = "Login";
 }
+
+<div class="titulo_pagina">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<section>
+        <div class="box">
+            <img src="images/Instadev.svg" alt="Imagem do Logo Instadev">
+
+            <form  method="POST" class="log" action='@Url.Action("Logar")'>
+
+                <div class="field">
+                <input type="email" name="Email" placeholder="Email...">
+                </div>
+
+                <div class="field">
+                <input type="password" name="Senha" placeholder="Senha...">
+                </div>
+                
+                <button class="gradient-btn" type="submit" name="Botao">Enviar</button>
+                
+            </form>
+
+            <div class="forget">
+            <p style="font-variant:small-caps;margin-top:20px;">__________________   ou   _________________</p>
+            <p style="font-size:11px;"><a href="#" alt="">Esqueceu a senha ?</a></p>
+            </div>
+        </div>
+
+        <div class="below">
+            <p>Não tem uma conta? <a id="cadastro" asp-area=""  asp-controller="Usuario"  asp-action="Index"><b>Cadastre-se.</b></a></p>
+        </div>
+        <div class="final">
+            <p>Obtenha o aplicativo</p>
+            <div class="aplicativos">
+                <a href="#" alt=""><img src="~/images/app_store 1.jpg" alt=""></a><a href="#" alt=""><img src="~/images/google_play 1.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <i class="erro">@TempData.Peek("Mensagem")</i>
