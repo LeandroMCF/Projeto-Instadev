@@ -1,18 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-<<<<<<< HEAD
       "C:\\Users\\PC - CARLOS\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\PC - CARLOS\\.nuget\\packages"
-=======
-      "C:\\Users\\joao\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\joao\\.nuget\\packages"
->>>>>>> FPagEditPerfil
-=======
-      "C:\\Users\\DiomipcdoLeonidas\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DiomipcdoLeonidas\\.nuget\\packages"
->>>>>>> FPagPerfil
     ]
   }
 }

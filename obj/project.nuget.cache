@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "tvIqwFSfi1F+NirBhRC6SgK0xPjrlT4xZnWv47xov1kY91LtGQggUpB6VA4YGR0HavPCxf4l/35kZoXyQ9brBw==",
+  "dgSpecHash": "E/EjaErNJqQanoDAUzFAVRm1DA6ZvSsygubAGQK5+JXxqvGrGVS+TzODACIGPimAx9ey+qanVwwsggKhkQI1sQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
-=======
-  "dgSpecHash": "sKeEHYy6xGfTtsODipli/EPvPuo/h8y62DvgMLVEUfkqyhr1R9EIfyq9IRxzBNNssSKx+UOu8gvGMaCsS3yHwg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
->>>>>>> FPagPerfil
+  "projectFilePath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -8,34 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\joao\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\DiomipcdoLeonidas\\.nuget\\packages\\": {}
->>>>>>> FPagPerfil
+    "C:\\Users\\PC - CARLOS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
+      "projectUniqueName": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
       "projectName": "Projeto-Instadev",
-      "projectPath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\Projeto-Instadev.csproj",
-      "packagesPath": "C:\\Users\\joao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joao\\Desktop\\SENAI\\Projeto-Instadev\\obj\\",
+      "projectPath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\Projeto-Instadev.csproj",
+      "packagesPath": "C:\\Users\\PC - CARLOS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\joao\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-      "projectUniqueName": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
-      "projectName": "Projeto-Instadev",
-      "projectPath": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\Projeto-Instadev.csproj",
-      "packagesPath": "C:\\Users\\DiomipcdoLeonidas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DiomipcdoLeonidas\\Desktop\\Diomi DEV\\Diomi DEV\\Projeto InstaDEV\\Projeto-Instadev\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\DiomipcdoLeonidas\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> FPagPerfil
+        "C:\\Users\\PC - CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -77,5 +62,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\PC - CARLOS\\Desktop\\Projeto\\Projeto-Instadev\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
