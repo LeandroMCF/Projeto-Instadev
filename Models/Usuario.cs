@@ -37,17 +37,6 @@ namespace Projeto_Instadev.Models
             File.AppendAllLines(PATH, linha);
         }
 
-
-
-        //Método para deletar um usuário
-        public void Delete(int idUsuario)
-        {
-            List<string> linhas = ReadAllLinesCSV(PATH);
-            // 1;FLA;fla.png
-            linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
-            RewriteCSV(PATH, linhas);
-        }
-
         //Método para ler os usuários
         public List<Usuario> ReadAll()
         {
@@ -80,6 +69,15 @@ namespace Projeto_Instadev.Models
             linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
             linhas.Add( PrepararLinha(u) );                        
             RewriteCSV(PATH, linhas); 
+        }
+
+        //Método para deletar um usuário
+        public void Delete(int idUsuario)
+        {
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            // 1;FLA;fla.png
+            linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
+            RewriteCSV(PATH, linhas);
         }
 
         public bool GerarIdUsuario(int id)

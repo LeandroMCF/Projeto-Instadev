@@ -53,7 +53,7 @@ namespace Projeto_Instadev.Controllers
             usuarioModel.Create(novoUsuario);            
             ViewBag.Usuarios = usuarioModel.ReadAll();
 
-            return LocalRedirect("~/Usuario/Listar");
+            return LocalRedirect("~/Login");
         }
     }
 }
