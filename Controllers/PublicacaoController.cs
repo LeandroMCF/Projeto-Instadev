@@ -81,8 +81,8 @@ namespace Projeto_Instadev.Controllers
         {
             Publicacao publicacao = new Publicacao();
             Comentario coment = new Comentario();
-            coment.IdComentario = GerarId();
 
+            coment.IdComentario = GerarId();
             coment.Mensagem = form["comentar"];
             comentario.CriarComentario(coment);
             ViewBag.Comentarios = comentario.ReadAll();

@@ -16,6 +16,7 @@ namespace Projeto_Instadev.Models
         
         private const string PATH = "Database/Comentarios.csv";
 
+        Publicacao publicacao = new Publicacao();
         public Comentario()
         {
             CreateFolderAndFile(PATH);
