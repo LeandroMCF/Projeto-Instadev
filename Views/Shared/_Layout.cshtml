@@ -20,47 +20,54 @@
         case "Login":
             <link rel="stylesheet" href="~/css/Loginstyle.css"/>
         break;
+        
+        case "Edição de Perfil":
+            <link rel="stylesheet" href="~/css/editperfil.css"/> 
+        break;
     }
-        @* <link rel="stylesheet" href="~/css/paginaperfil.css"/>
-        <link rel="stylesheet" href="~/css/editperfil.css"/> *@
+        @* <link rel="stylesheet" href="~/css/paginaperfil.css"/>*@
 </head>
 <body>
-    <header>
-        <div class="topo">
-            <div class="menu">
+    @if (@ViewData["Title"].ToString() == "Feed" || @ViewData["Title"].ToString() == "Edição de Perfil")
+    {
+        <header>
+            <div class="topo">
+                <div class="menu">
 
-                <a href="#">
-                    <img class="logo" src="../images/logo_Instadev.png" alt="Logo do site InstaDev">
-                </a>
-                
-                <form class="barra" action="#">
-                    <input type="pesquisar" name="pesquisar" placeholder="Pesquisar">
-                </form>
-                
-                <div class="icons">
                     <a href="#">
-                        <img src="../images/home.png" alt="Botão Home">
+                        <img class="logo" src="../images/logo_Instadev.png" alt="Logo do site InstaDev">
                     </a>
-                    <img src="../images/plane 1.png" alt="Botão Direct">
-                    <img src="../images/compass 1.png" alt="Botão Histórico">
-                    <img src="../images/coracao.png" alt="Botão Curtidas">
-                    <a href="#">
-                        <img src="../images/perfil.png" alt="Imagem do Perfil">
-                    </a>
-                    <li><a asp-area="" asp-controller="Login" asp-action="Logout" title="Deslogar">Log out</a></li>
-                
+                    
+                    <form class="barra" action="#">
+                        <input type="pesquisar" name="pesquisar" placeholder="Pesquisar">
+                    </form>
+                    
+                    <div class="icons">
+                        <a href="#">
+                            <img src="../images/home.png" alt="Botão Home">
+                        </a>
+                        <img src="../images/plane 1.png" alt="Botão Direct">
+                        <img src="../images/compass 1.png" alt="Botão Histórico">
+                        <img src="../images/coracao.png" alt="Botão Curtidas">
+                        <a href="#">
+                            <img src="../images/perfil.png" alt="Imagem do Perfil">
+                        </a>
+                        <li><a asp-area="" asp-controller="Login" asp-action="Logout" title="Deslogar">Log out</a></li>
+                    
+                    </div>
                 </div>
+                    
             </div>
-                
-        </div>
-    </header>
+        </header>
+    }
     
         @RenderBody()
-       
+    @if (@ViewData["Title"].ToString() == "Feed" || @ViewData["Title"].ToString() == "Edição de Perfil")
+    {
         <footer>
             <h2 class="rodape">© 2021 InstaDev do SENAI</h2>
         </footer>
-
+    }
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
