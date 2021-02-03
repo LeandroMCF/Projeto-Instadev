@@ -89,12 +89,29 @@ namespace Projeto_Instadev.Models
             RewriteCSV(PATH, linhas); 
         }
 
-        public int GerarId()
+        public bool GerarIdUsuario(int id)
         {
-            Random numAleatorio = new Random();
-            int id = numAleatorio.Next(100, 999);
-            string[] linhas = File.ReadAllLines(PATH);
-            return id;
+            bool existe = false;
+
+            List<string> csv = new List<string>();
+
+            csv = ReadAllLinesCSV(PATH);
+
+            foreach (var item in csv)
+            {
+                string[] linha = item.Split(";");
+                
+                if (id == int.Parse(linha[0]))
+                {
+                    existe = true;
+                }
+                else
+                {
+                    existe = false;
+                }
+            }
+            
+            return existe;
         }
     }
 }
