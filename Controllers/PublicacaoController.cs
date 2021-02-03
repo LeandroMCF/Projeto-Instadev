@@ -12,14 +12,13 @@ namespace Projeto_Instadev.Controllers
     {
         Publicacao publi = new Publicacao();
 
-        [Route("Listar")]
-
+        
         public IActionResult Index()
         {
             ViewBag.Publicacao = publi.ReadAll();
             return View();
         }
-
+        [Route("GerarId")]
         public int GerarId()
         {
             Random numAleatorio = new Random();

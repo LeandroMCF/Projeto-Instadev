@@ -20,7 +20,7 @@ namespace Projeto_Instadev.Models
         //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
         private string PrepararLinha(Usuario u)
         {
-            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
+            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento};{u.Email};{u.UserName};{u.Senha}";
         }
 
         public Usuario()
