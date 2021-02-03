@@ -70,37 +70,41 @@
     </main>
     <main>
         <section>
-            <div class="postagem">
-                <div class="perfil-post">
-                    <a href="#"><img src="../images/gabigordo 1.png" alt="#"></a>
-                    <div class="texto">
-                        <h2>gabigordo</h2>
-                        <p>Flamengo, Rj</p>
+            @foreach (Publicacao item in ViewBag.Publicacao)
+            {
+                <div class="postagem">
+                    <div class="perfil-post">
+                        <a href="#"><img src="../images/gabigordo 1.png" alt="#"></a>
+                        <div class="texto">
+                            <h2>gabigordo</h2>
+                            <p>Flamengo, Rj</p>
+                        </div>
+                        <a class="excluir" asp-area="" asp-controller="Publicacao" asp-action="Excluir" asp-route-id="@item.IdPublicacao">Excluir</a>
+                    </div>
+                    <div class="imagem-post">
+                        <img src="~/img/publicacao/@item.Imagem">
+                    </div>
+                    <div class="curtir-comentar">
+                        <a id="icon-curtir" href="#"><img src="../images/Vector.png"></a>
+                        <a id="icon-comentar" href="#"><img src="../images/Comentar.png"></a>
+                        <input type="text" name="comentar" placeholder="Comentar...">
+                    </div>
+                    <div class="comentarios">
+                        <div class="comentario">
+                            <h2>gabigordo</h2>
+                            <p>@item.Legenda</p>
+                        </div>
+                        <div class="comentario">
+                            <h2>Yes_Baby</h2>
+                            <p>Thank you</p>
+                        </div>
+                        <div class="comentario">
+                            <h2>king_pele</h2>
+                            <p>Esses são bons de bola, entende?</p>
+                        </div>
                     </div>
                 </div>
-                <div class="imagem-post">
-                    <img src="../images/post-gabigordo 1.png">
-                </div>
-                <div class="curtir-comentar">
-                    <a id="icon-curtir" href="#"><img src="../images/Vector.png"></a>
-                    <a id="icon-comentar" href="#"><img src="../images/Comentar.png"></a>
-                    <input type="text" name="comentar" placeholder="Comentar...">
-                </div>
-                <div class="comentarios">
-                    <div class="comentario">
-                        <h2>gabigordo</h2>
-                        <p>Amo vocês</p>
-                    </div>
-                    <div class="comentario">
-                        <h2>Yes_Baby</h2>
-                        <p>Thank you</p>
-                    </div>
-                    <div class="comentario">
-                        <h2>king_pele</h2>
-                        <p>Esses são bons de bola, entende?</p>
-                    </div>
-                </div>
-            </div>
+            }
         </section>
     </main>
 </div>

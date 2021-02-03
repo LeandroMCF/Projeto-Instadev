@@ -28,7 +28,7 @@ namespace Projeto_Instadev.Controllers
              
             Usuario usuarioModel = new Usuario();
             
-            List<string> csv = usuarioModel.ReadAllLinesCSV("Database/Usuario.csv");
+            List<string> csv = usuarioModel.ReadAllLinesCSV(usuarioModel.PATH);
 
             var logado = 
             csv.Find(
@@ -40,12 +40,12 @@ namespace Projeto_Instadev.Controllers
             if(logado != null)
             {
                  HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
-                return LocalRedirect("~/");
+                 return LocalRedirect("~/");
             }else{
            
              Mensagem = "Senha ou username incorreto !";
             
-            return LocalRedirect("~/Login");
+             return LocalRedirect("~/Login");
             }
 
         }
@@ -54,7 +54,7 @@ namespace Projeto_Instadev.Controllers
             public IActionResult Logout()
             {
                  HttpContext.Session.Remove("_UserName");
-                 return LocalRedirect("~/");
+                 return LocalRedirect("~/Login");
             }
     }
 }

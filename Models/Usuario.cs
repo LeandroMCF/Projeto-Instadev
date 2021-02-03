@@ -20,7 +20,7 @@ namespace Projeto_Instadev.Models
         //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
         private string PrepararLinha(Usuario u)
         {
-            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
+            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento};{u.Email};{u.UserName};{u.Senha}";
         }
 
         public Usuario()
@@ -35,6 +35,7 @@ namespace Projeto_Instadev.Models
             File.AppendAllLines(PATH, linha);
         }
 
+              
         //Método para ler os usuários
         public List<Usuario> ReadAll()
         {
@@ -80,7 +81,6 @@ namespace Projeto_Instadev.Models
         }
 
 
-
         public bool GerarIdUsuario(int id)
         {
             bool existe = false;
@@ -106,14 +106,3 @@ namespace Projeto_Instadev.Models
         }
     }
 }
-        // public Usuario(int idUsuario, string nome, string foto, string dataNascimento, string email, string userName, string senha) 
-        // {
-        //         this.IdUsuario = idUsuario;
-        //         this.Nome = nome;
-        //         this.Foto = foto;
-        //         this.DataNascimento = dataNascimento;
-        //         this.Email = email;
-        //         this.UserName = userName;
-        //         this.Senha = senha;
-               
-        // }
