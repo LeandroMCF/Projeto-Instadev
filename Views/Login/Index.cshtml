@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewData["Title"] = "Login";
 }
 
@@ -10,17 +10,17 @@
         <div class="box">
             <img src="images/Instadev.svg" alt="Imagem do Logo Instadev">
 
-            <form  method="POST" class="log" action='@Url.Action("Logar")'>
+            <form  method="POST" class="log" action='@Url.Action("Logar")' enctype="multipart/form-data">
 
-                <div class="field">
+                <div>
                 <input type="email" name="Email" placeholder="Email...">
                 </div>
 
-                <div class="field">
+                <div>
                 <input type="password" name="Senha" placeholder="Senha...">
                 </div>
                 
-                <button class="gradient-btn" type="submit" name="Botao">Enviar</button>
+                <button type="submit" name="Botao">Enviar</button>
                 
             </form>
 
@@ -36,7 +36,7 @@
         <div class="final">
             <p>Obtenha o aplicativo</p>
             <div class="aplicativos">
-                <a href="#" alt=""><img src="~/images/app_store 1.jpg" alt=""></a><a href="#" alt=""><img src="~/images/google_play 1.jpg" alt=""></a>
+                <a href="https://www.apple.com/br/app-store/" target="blank" alt=""><img src="~/images/app_store 1.jpg" alt=""></a><a href="https://play.google.com/store" alt=""><img src="~/images/google_play 1.jpg" alt=""></a>
             </div>
         </div>
     </section>

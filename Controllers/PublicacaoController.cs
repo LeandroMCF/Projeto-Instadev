@@ -13,14 +13,13 @@ namespace Projeto_Instadev.Controllers
         Publicacao publi = new Publicacao();
         Comentario comentario = new Comentario();
 
-
+        
         public IActionResult Index()
         {
             ViewBag.Publicacao = publi.ReadAll();
             ViewBag.Comentarios = new Comentario();
             return View();
         }
-
         [Route("GerarId")]
         public int GerarId()
         {
