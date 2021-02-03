@@ -86,5 +86,11 @@ namespace Projeto_Instadev.Models
             }
             return existe;
         }
+
+        public List<Comentario> BuscarId(int id_publi)
+        {
+            List<Comentario> comentarios = ReadAll().FindAll(x => x.IdPublicacao == id_publi);
+            return comentarios;
+        }
     }
 }
