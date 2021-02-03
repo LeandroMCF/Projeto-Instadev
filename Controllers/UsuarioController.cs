@@ -12,7 +12,6 @@ namespace Projeto_Instadev.Controllers
         Usuario usuarioModel = new Usuario();
         
 
-        [Route("Listar")]
         public IActionResult Index()
         {
             ViewBag.Usuarios = usuarioModel.ReadAll();
@@ -20,6 +19,7 @@ namespace Projeto_Instadev.Controllers
         }
 
 
+        [Route("GerarId")]
         public int GerarId()
         {
             Random numAleatorio = new Random();

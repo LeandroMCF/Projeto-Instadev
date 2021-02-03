@@ -35,19 +35,18 @@
                     <p>Chaves_Metal</p>
                 </div>
             </div>
-            <aside class="perfil-lateral">
-                <a href="#"><img src="../images/thank-you 2.png"></a>
-                <div class="texto">
-                    <h2>Yes_Baby</h2>
-                    <p>Marcos Jeeves</p>
-                </div>
-            </aside>
+                <aside class="perfil-lateral">
+                    <a href="#"><img src="../images/thank-you 2.png"></a>
+                    <div class="texto">
+                        <h2>Yes_Baby</h2>
+                        <p>Marcos Jeeves</p>
+                    </div>
+                </aside>
         </section>
     </main>
     <!--Fim stories-->
     <!--Postar-->
     <main>
-
         <section class="postar flex-center-bt">
             <div class="itens">
                 <img src="../images/thank-you 2.png">
@@ -103,6 +102,10 @@
                         @foreach (Comentario coment in ViewBag.Comentarios.BuscarId(item.IdPublicacao))
                         {
                             <div class="comentario">
+                                @* @if (ViewBag.IdLogado == coment.IdUser)
+                                {
+                                    <p>excluir</p>
+                                } *@
                                 <h2>Yes_Baby</h2>
                                 <p>@coment.Mensagem</p>
                             </div>

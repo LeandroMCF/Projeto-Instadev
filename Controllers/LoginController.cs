@@ -18,9 +18,11 @@ namespace Projeto_Instadev.Controllers
 
         public IActionResult Index()
     {
+        ViewBag.Login = new LoginController();
         return View();
     }
         
+
 
        [Route("Logar")]
 
@@ -41,24 +43,23 @@ namespace Projeto_Instadev.Controllers
                     
             if(logado != null)
             {
-                 HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
-                 HttpContext.Session.SetString("_UserId", logado.Split(";")[0]);
-                 return LocalRedirect("~/Publicacao");
+                HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_UserId", logado.Split(";")[0]);
+                return LocalRedirect("~/Publicacao");
 
             }else{
            
-             Mensagem = "Senha ou username incorreto !";
+                Mensagem = "Senha ou username incorreto !";
             
-             return LocalRedirect("~/Login");
+                return LocalRedirect("~/Login");
             }
-
         }
       
             [Route("Logout")]
             public IActionResult Logout()
             {
-                 HttpContext.Session.Remove("_UserName");
-                 return LocalRedirect("~/Login");
+                HttpContext.Session.Remove("_UserName");
+                return LocalRedirect("~/Login");
             }
     }
 }
