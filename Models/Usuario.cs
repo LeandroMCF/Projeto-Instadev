@@ -17,11 +17,13 @@ namespace Projeto_Instadev.Models
 
         public string PATH = "Database/Usuario.csv";
 
+
         //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
         private string PrepararLinha(Usuario u)
         {
             return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento};{u.Email};{u.UserName};{u.Senha}";
         }
+
 
         public Usuario()
         {
@@ -69,7 +71,6 @@ namespace Projeto_Instadev.Models
             RewriteCSV(PATH, linhas); 
         }
 
-
         //Método para deletar um usuário
         public void Delete(int idUsuario)
         {
@@ -78,8 +79,6 @@ namespace Projeto_Instadev.Models
             linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
             RewriteCSV(PATH, linhas);
         }
-
-
 
         public bool GerarIdUsuario(int id)
         {
@@ -102,6 +101,7 @@ namespace Projeto_Instadev.Models
                     existe = false;
                 }
             }
+            
             return existe;
         }
     }
