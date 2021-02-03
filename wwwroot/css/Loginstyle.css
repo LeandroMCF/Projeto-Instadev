@@ -3,31 +3,34 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 :root{
     --azul: #2686cc;
-    --corinput:#FAFAFA;
     --cordalinha:#CBCBCB;
     --corplaceholder:#AFAFAF;
     --corborda:#DCDCDC;
-    --fundo:#E5E5E5;
+    --fundo:#FAFAFA;
     --erro:#8134AF;
 }
 body{
     color:var(--fundo);
     background-color:var(--fundo);
     display:flex;
-    justify-content:center;
+    justify-content:center;  
+    width:90%;  
 }
 
 .box{
+    margin-top:60px;
     width:342px;
     height:380px;
     background-color:white;
     border:1px #f1f1f1 solid;
-     
+    
 }
+
 .box img{
     width:165px;
     height:83px;
@@ -44,27 +47,28 @@ form{
     margin-top:0;
 }
 
-input{
+.log input{
     border:1px solid var(--corborda);
     border-radius:2px;
-    background-color: var(--corinput);
+    background-color: var(--fundo);
     color:var(--corplaceholder);
     margin-bottom:9px;
-}
-.stripe{
-    font-size:11px;
+    margin-left:38px;
     padding-left:12px;
+}
+
+.log, .log input{
+    font-size:11px;
     padding-top:10px;
     padding-bottom:10px;
-    margin-left:38px;
     margin-right:38px;
     border-radius:2px;
     margin-bottom:9x;
     width:267px;
+
 }
 
-button{
-    
+.log button{
     border-radius:2px;
     background-color:var(--azul);
     padding-top:10px;
@@ -72,11 +76,14 @@ button{
     margin-top:10px;
     padding-bottom:10px;
     font-size:12px;
+    width:267px;
     font-weight:bold;
     color:white;
     border:1px solid transparent;
     cursor:pointer;
+    margin-left:38px;
 }
+
 a{
     text-decoration:none;
     color:var(--azul);

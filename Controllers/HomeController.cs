@@ -22,7 +22,9 @@ namespace Projeto_Instadev.Controllers
         public IActionResult Index()
         {
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
-            return View();
+            /*return View();*/
+             return LocalRedirect("~/Login");
+            
         }
 
         public IActionResult Privacy()

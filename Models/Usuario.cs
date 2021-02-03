@@ -20,7 +20,7 @@ namespace Projeto_Instadev.Models
         //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
         private string PrepararLinha(Usuario u)
         {
-            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
+            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento};{u.Email};{u.UserName};{u.Senha}";
         }
 
         public Usuario()
@@ -33,21 +33,6 @@ namespace Projeto_Instadev.Models
         {
             string[] linha = { PrepararLinha(u) };
             File.AppendAllLines(PATH, linha);
-        }
-
-        //Método para preparar a linha para a estrutura do objeto Usuário,retornando um arquivo csv
-        private string PrepararLinha(Usuario u)
-        {
-            return $"{u.IdUsuario};{u.Nome};{u.Foto};{u.DataNascimento}.{u.Email};{u.UserName};{u.Senha};";
-        }   
-
-        //Método para deletar um usuário
-        public void Delete(int idUsuario)
-        {
-            List<string> linhas = ReadAllLinesCSV(PATH);
-            // 1;FLA;fla.png
-            linhas.RemoveAll(x => x.Split(";")[0] == idUsuario.ToString());                        
-            RewriteCSV(PATH, linhas);
         }
 
         //Método para ler os usuários
