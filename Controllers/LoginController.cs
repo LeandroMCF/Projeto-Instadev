@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Instadev.Models;
+using System;
 
 
 namespace Projeto_Instadev.Controllers
@@ -22,8 +23,8 @@ namespace Projeto_Instadev.Controllers
         
 
        [Route("Logar")]
-      
-        public IActionResult Logar(IFormCollection form)
+
+         public IActionResult Logar(IFormCollection form)
         {
              
             Usuario usuarioModel = new Usuario();
@@ -33,14 +34,17 @@ namespace Projeto_Instadev.Controllers
             var logado = 
             csv.Find(
                 x => 
-                x.Split(";")[2] == form["Email"] && 
-                x.Split(";")[3] == form["Senha"]
+                x.Split(";")[4] == form["Email"] && 
+                x.Split(";")[6] == form["Senha"]
             );
+            
                     
             if(logado != null)
             {
                  HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
-                 return LocalRedirect("~/");
+                 HttpContext.Session.SetString("_UserId", logado.Split(";")[0]);
+                 return LocalRedirect("~/Publicacao");
+
             }else{
            
              Mensagem = "Senha ou username incorreto !";
@@ -49,7 +53,7 @@ namespace Projeto_Instadev.Controllers
             }
 
         }
-
+      
             [Route("Logout")]
             public IActionResult Logout()
             {
