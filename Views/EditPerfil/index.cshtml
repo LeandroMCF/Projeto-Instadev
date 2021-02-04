@@ -1,20 +1,22 @@
 @{
     ViewData["Title"] = "Edicao";
 }
-<main>
+    <main>
         <section class="banner flex-justify-align-center">
             <div class="container">
+                @foreach (Usuario item in ViewBag.Usuario)
+                {
                 <aside class="aside_content"> 
                     <div class="editar_content flex-justify-align-center">
-                        <p>Editar Perfil</p>
+                        <p>@item.UserName</p>
                     </div>
                 </aside>
                 <div class="content">
                     <div class="content_perfil_foto">
                         <img src="img/fotodeperfil.png" alt="Foto de perfil do usuário">
                             <div class="content_texto">
-                            <h2>yes_baby</h2>
-                            <a href="#">Alterar foto de perfil</a>  
+                            <h2>@item.Foto</h2>
+                            <a href="#">Alterar foto de perfil</a>
                             </div>
                     </div>
                     
@@ -23,7 +25,7 @@
                         <div>
                             <form class="content">
                                 <label for="name"></label><br>
-                                <input class="caixa" type="text" id="name" name="name"><br>
+                                <input class="caixa" type="text" name="Nome"><br>
                             </form>
                         </div>
                     </div>
@@ -40,7 +42,7 @@
                         <div>
                             <form class="content">
                                 <label for="username"></label><br>
-                                <input class="caixa" type="text" id="username" name="username"><br>
+                                <input class="caixa" type="text" name="UserName"><br>
                               </form>
                         </div>
                     </div>
@@ -58,18 +60,19 @@
                         <div>
                             <form class="content">
                                 <label for="email"></label><br>
-                                <input class="caixa" type="text" id="email" name="email"><br>
+                                <input class="caixa" type="email" name="Email" placeholder="E-Mail"><br>
                               </form>
                         </div>
                     </div>
                     
                     <div class="content_perfil">
                         <div class="button">
-                            <p>Enviar</p>
+                            <button id="Enviar" type="submit" name="Botao">Enviar</button>
                         </div>
-                    <a href="#">Desativar minha conta definitivamente</a>
+                    <a asp-area="" asp-controller="Edicao" asp-action="Deletar" asp-route-id="@item.IdUsuario">Desativar minha conta definitivamente</a>
                     </div>
                 </div>
+                }
             </div>
         </section>
-</main>
+    </main>

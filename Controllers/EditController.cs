@@ -10,10 +10,12 @@ namespace Projeto_Instadev.Controllers
         [Route("Edicao")]
         public class EdicaoController: Controller
         {
-            Usuario usuarioModel = new Usuario();
-
+            Usuario usuarioAntigo = new Usuario();
+            Usuario usuarioEditado = new Usuario();
             public IActionResult Index()
+
             {
+                ViewBag.UserName = HttpContext.Session.GetString("_UserName");
                 return View();
             }
 
@@ -22,8 +24,6 @@ namespace Projeto_Instadev.Controllers
             public IActionResult Editar(IFormCollection form)
             {
                 //Novo usuário para alteração
-                Usuario usuarioAntigo  = new Usuario();
-                Usuario usuarioEditado = new Usuario();
 
                 usuarioEditado.Nome        = form["Nome"];
                 usuarioEditado.Foto        = form["Foto"];
@@ -41,9 +41,17 @@ namespace Projeto_Instadev.Controllers
                 {
                     usuarioEditado.Update(usuarioAntigo);
                 }
-                return LocalRedirect("~/Usuario/EditPerfil");
+                return LocalRedirect("~/");
                 }
-            }
             
+            [Route("Deletar")]
+
+            public IActionResult EditarDeletar(int id)
+            {
+                usuarioEditado.Delete(id);
+                return LocalRedirect("~/"); //Qual página?
+            }
+
+            }
         }
     }
