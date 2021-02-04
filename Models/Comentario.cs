@@ -46,9 +46,9 @@ namespace Projeto_Instadev.Models
                 Comentario coment = new Comentario();
                 Publicacao publicacao = new Publicacao();
                 coment.IdComentario = int.Parse(linha[0]);
-                coment.IdUser = int.Parse(linha[1]);
-                coment.IdPublicacao = int.Parse(linha[2]);
-                coment.Mensagem = linha[2];
+                coment.IdPublicacao = int.Parse(linha[1]);
+                coment.IdUser = int.Parse(linha[2]);
+                coment.Mensagem = linha[3];
                 comentarios.Add(coment);
             }
             return comentarios;

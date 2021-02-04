@@ -102,10 +102,10 @@
                         @foreach (Comentario coment in ViewBag.Comentarios.BuscarId(item.IdPublicacao))
                         {
                             <div class="comentario">
-                                @* @if (ViewBag.IdLogado == coment.IdUser)
+                                @if (ViewBag.IdLogado == coment.IdUser.ToString())
                                 {
-                                    <p>excluir</p>
-                                } *@
+                                    <a class="excluir" asp-area="" asp-controller="Publicacao" asp-action="ExcluirComent">Excluir</a>
+                                } 
                                 <h2>Yes_Baby</h2>
                                 <p>@coment.Mensagem</p>
                             </div>

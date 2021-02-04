@@ -78,6 +78,15 @@ namespace Projeto_Instadev.Controllers
             return LocalRedirect("~/Publicacao");
         }
 
+        [Route("Comentario/{id}")]
+        public IActionResult ExcluirComent(int id)
+        {
+            comentario.ExcluirComentario(id);
+            ViewBag.Comentario = new Comentario();
+            
+            return LocalRedirect("~/Publicacao");
+        }
+
         [Route("Comentar")]
         public IActionResult Comentar(IFormCollection form)
         {
@@ -92,5 +101,6 @@ namespace Projeto_Instadev.Controllers
 
             return Redirect("~/Publicacao");
         }
+
     }
 }
