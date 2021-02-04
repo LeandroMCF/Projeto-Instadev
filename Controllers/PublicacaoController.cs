@@ -11,13 +11,17 @@ namespace Projeto_Instadev.Controllers
     public class PublicacaoController : Controller
     {
         Publicacao publi = new Publicacao();
-        Comentario comentario = new Comentario();
+        Comentario comentario = new Comentario();  
 
         
         public IActionResult Index()
         {
             ViewBag.Publicacao = publi.ReadAll();
+            ViewBag.Usuario = new Usuario();
             ViewBag.Comentarios = new Comentario();
+            ViewBag.Name = HttpContext.Session.GetString("_Name");
+            ViewBag.IdLogado = HttpContext.Session.GetString("_UserId");
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             return View();
         }
         [Route("GerarId")]
@@ -40,6 +44,7 @@ namespace Projeto_Instadev.Controllers
         {
             Publicacao publicacao = new Publicacao();
             publicacao.IdPublicacao = GerarId();
+            publicacao.IdUser = int.Parse(HttpContext.Session.GetString("_UserId"));
             publicacao.Legenda = form["descricao"];
             if(form.Files.Count > 0)
             {
@@ -69,7 +74,18 @@ namespace Projeto_Instadev.Controllers
         public IActionResult Excluir(int id)
         {
             publi.ExcluirPublicacao(id);
+            comentario.ExcluirComentPubli(id);
             ViewBag.Publicacao = publi.ReadAll();
+            ViewBag.Comentario = new Comentario();
+            
+            return LocalRedirect("~/Publicacao");
+        }
+
+        [Route("Comentario/{id}")]
+        public IActionResult ExcluirComent(int id)
+        {
+            comentario.ExcluirComentario(id);
+            ViewBag.Comentario = new Comentario();
             
             return LocalRedirect("~/Publicacao");
         }
@@ -81,13 +97,14 @@ namespace Projeto_Instadev.Controllers
             Comentario coment = new Comentario();
 
             coment.IdComentario = GerarId();
-            int idPub = GerarId();
-            coment.Mensagem = form["comentar"];
             coment.IdPublicacao = int.Parse(form["id_publicacao"]);
+            coment.IdUser = int.Parse(HttpContext.Session.GetString("_UserId"));
+            coment.UserName = HttpContext.Session.GetString("_UserName");
+            coment.Mensagem = form["comentar"];
             comentario.CriarComentario(coment);
-            ViewBag.Comentarios = new Comentario();
 
             return Redirect("~/Publicacao");
         }
+
     }
 }
