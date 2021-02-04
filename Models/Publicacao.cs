@@ -14,11 +14,15 @@ namespace Projeto_Instadev.Models
         
         public int Likes { get; set; }
 
+        public int IdUser { get; set; }
+        
+        
+
         public const string PATH = "Database/publicacao.csv";
 
         private string PrepararLinha(Publicacao p)
         {
-            return $"{p.IdPublicacao};{p.Legenda};{p.Imagem}";
+            return $"{p.IdPublicacao};{p.IdUser};{p.Legenda};{p.Imagem}";
         }
 
         public Publicacao()
@@ -43,8 +47,9 @@ namespace Projeto_Instadev.Models
 
                 Publicacao publi = new Publicacao();
                 publi.IdPublicacao = int.Parse(linha[0]);
-                publi.Legenda = linha [1];
-                publi.Imagem = linha [2];
+                publi.IdUser = int.Parse(linha[1]);
+                publi.Legenda = linha [2];
+                publi.Imagem = linha [3];
                 publicacao.Add(publi);
             }
             return publicacao;
@@ -85,5 +90,7 @@ namespace Projeto_Instadev.Models
             }
             return existe;
         }
+
+        
     }
 }
