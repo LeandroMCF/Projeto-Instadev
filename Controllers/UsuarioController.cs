@@ -44,7 +44,27 @@ namespace Projeto_Instadev.Controllers
 
             novoUsuario.IdUsuario   = GerarId();
             novoUsuario.Nome        = form["Nome"];
-            novoUsuario.Foto        = form["Foto"];
+            if(form.Files.Count > 0)
+            {
+                // Upload Início
+                var file    = form.Files[0];
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/usuario");
+
+                if(!Directory.Exists(folder)){
+                    Directory.CreateDirectory(folder);
+                }
+                
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))  
+                {  
+                    file.CopyTo(stream);  
+                }
+                novoUsuario.Foto  = file.FileName;                
+            }
+            else
+            {
+                novoUsuario.Foto = "padrao.png";
+            }
             novoUsuario.DataNascimento = form["DataNascimento"];
             novoUsuario.Email       = form["Email"];
             novoUsuario.UserName    = form["UserName"];

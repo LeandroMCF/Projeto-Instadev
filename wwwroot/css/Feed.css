@@ -179,12 +179,21 @@ p{
     margin-top: 38px;
     flex-direction: column;
 }
+.imgPefil{
+    width: auto;
+    border-radius: 5px;
+}
 .excluir{
-    
+    padding-left: 50px;
     text-decoration: none;
     color: red;
     display: flex;
     justify-content: flex-end;
+}
+.excluirComent{
+    width: 12px;
+    margin-left: 25px;
+    margin-top: 10px;
 }
 .itens{
     width: 100%;
@@ -323,6 +332,9 @@ p{
 }
 .comentario p{
     margin-left: 10px;
+}
+.legenda{
+    padding-bottom: 10px;
 }
 
 

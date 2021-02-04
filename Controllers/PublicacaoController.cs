@@ -17,8 +17,11 @@ namespace Projeto_Instadev.Controllers
         public IActionResult Index()
         {
             ViewBag.Publicacao = publi.ReadAll();
+            ViewBag.Usuario = new Usuario();
             ViewBag.Comentarios = new Comentario();
+            ViewBag.Name = HttpContext.Session.GetString("_Name");
             ViewBag.IdLogado = HttpContext.Session.GetString("_UserId");
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             return View();
         }
         [Route("GerarId")]
@@ -96,6 +99,7 @@ namespace Projeto_Instadev.Controllers
             coment.IdComentario = GerarId();
             coment.IdPublicacao = int.Parse(form["id_publicacao"]);
             coment.IdUser = int.Parse(HttpContext.Session.GetString("_UserId"));
+            coment.UserName = HttpContext.Session.GetString("_UserName");
             coment.Mensagem = form["comentar"];
             comentario.CriarComentario(coment);
 

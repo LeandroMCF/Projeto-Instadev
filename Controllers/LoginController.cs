@@ -43,7 +43,8 @@ namespace Projeto_Instadev.Controllers
                     
             if(logado != null)
             {
-                HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_Name", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_UserName", logado.Split(";")[5]);
                 HttpContext.Session.SetString("_UserId", logado.Split(";")[0]);
                 return LocalRedirect("~/Publicacao");
 
