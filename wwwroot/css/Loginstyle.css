@@ -3,7 +3,6 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
 
 :root{
@@ -17,18 +16,19 @@
 body{
     color:var(--fundo);
     background-color:var(--fundo);
+}
+
+.conteudo-login{
     display:flex;
-    justify-content:center;  
-    width:90%;  
+    justify-content:center; 
 }
 
 .box{
-    margin-top:60px;
+    margin:80px auto 0 auto;
     width:342px;
     height:380px;
     background-color:white;
     border:1px #f1f1f1 solid;
-    
 }
 
 .box img{
@@ -40,11 +40,11 @@ body{
 .box p{
     text-align:center;
     color:#CBCBCB;
-    margin-bottom:30px;
-    
+    margin-bottom:30px;   
 }
+
 form{
-    margin-top:0;
+    margin-top:9px;
 }
 
 .log input{
@@ -65,7 +65,6 @@ form{
     border-radius:2px;
     margin-bottom:9x;
     width:267px;
-
 }
 
 .log button{
@@ -84,27 +83,33 @@ form{
     margin-left:38px;
 }
 
-a{
+.below a, .box a{
     text-decoration:none;
-    color:var(--azul);
-    
+    color:var(--azul);   
 }
+
 .below{
+    display:flex;
+    justify-content:center;
     background-color:white;
     border:1px #f1f1f1 solid;
     color:black;
-    margin-top:9px;
+    font-weight:bold;
+    margin:9px auto 0 auto;
     font-size:11px;
     padding: 30px 80px 30px 80px;
+    width:342px;
 }
-
+.forget p{
+    margin-bottom:9px;
+    margin-top:9px;
+}
 .final p{
     margin-top:20px;
     padding-bottom:20px;
     color:black;
     display:block;
     text-align:center;
-    padding-left:-38px;
     font-size:11.5px;
 }
 .final img{

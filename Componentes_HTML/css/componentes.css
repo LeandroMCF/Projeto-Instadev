@@ -1,6 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --azul: #2686cc;
+    --cordalinha:#CBCBCB;
+    --corplaceholder:#AFAFAF;
+    --corborda:#DCDCDC;
+    --fundo:#FAFAFA;
+   
 }
 body{
     background-color: #FAFAFA;
@@ -13,17 +22,19 @@ body{
 }
 .topo{
     background-color:#FFF;
-    width: 100%;
+    width: 90%;
     height: 53px;
-    
+    border-bottom:2px solid #F1F1F1;
+    display:flex;
+    justify-content:center;
 }
 .menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 935px;
+    width: 30%;
     height: 100%;
-    margin-left: 492px;
+    margin-left: 0;
 }
 .barra input{
     text-align: center;
