@@ -61,6 +61,9 @@ namespace Projeto_Instadev.Controllers
             public IActionResult Logout()
             {
                 HttpContext.Session.Remove("_UserName");
+                HttpContext.Session.Remove("_UserId");
+                HttpContext.Session.Remove("_Name");
+                HttpContext.Session.Remove("_Email");
                 return LocalRedirect("~/Login");
             }
     }

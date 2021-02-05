@@ -91,6 +91,10 @@ namespace Projeto_Instadev.Models
             return existe;
         }
 
-        
+        public List<Publicacao> BuscarIdUser(int id_user)
+        {
+            List<Publicacao> publicacaos = ReadAll().FindAll(x => x.IdUser == id_user);
+            return publicacaos;
+        }
     }
 }

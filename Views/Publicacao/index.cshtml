@@ -36,7 +36,6 @@
                 </div>
             </div>
                 <aside class="perfil-lateral">
-                    <a asp-area="" asp-controller="Edicao" asp-action="index">sorry</a>
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
                         <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../images/@item.Foto"></a>                        

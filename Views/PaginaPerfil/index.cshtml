@@ -5,61 +5,73 @@
 <main>
     <div class="container">
         <section class="infos-perfil">
-            <div class="foto-perfil">
-            @foreach (Usuario item in ViewBag.BuscarNome(int.Parse(ViewBag.IdLogado)))
-            {
-                <img src="..../images/@item.Foto" alt="Foto do Perfil">
-            }
-            </div>
+                <div class="foto-perfil">
+                @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
+                {
+                    <img src="../images/@user.Foto" alt="Foto do Perfil">
+                }
+                </div>
             <div class="info">
-                    <p>Nome do Perfil</p>     
-    
+                @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
+                {
+                    <p>@user.Nome</p>     
+                }
                     <div class="seguidores">
                         <p> 1 publicações</p>
                         <p> 1 seguindo</p>
                         <p> 1 seguidores</p>
                     </div>
                     <div class="usuario">
-                        <h5>Nome do Perfil</h5>
-                        <a asp-controller="Login" asp-action="Logout">Sair</a>
-                        
+                    @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
+                    {
+                        <h5>@user.Nome</h5>
+                    }
                     </div>
             </div>
         </section>
         <section class="publicacoes">
         
             <h4>PUBLICAÇÕES</h4>
-                <div class="publicacao">
-                    <div class="imagem">
-                    <img src="" alt="">
-                    </div>
-                    <div class="info-publicacao">
+                @foreach (Publicacao item in ViewBag.Publicacao.BuscarIdUser(int.Parse(ViewBag.IdUser)))
+                {
+                    <div class="publicacao">
+                        <div class="imagem">
+                            <img src="../img/publicacao/@item.Imagem" alt="">
+                        </div>
+                        <div class="info-publicacao">
                             <div class="imagemperfilpublicacao">
-                                <img src="" alt="">
+                                @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
+                                {
+                                    <img src="../images/@user.Foto" alt="">
+                                }
                             </div>
-                            <div class="nomeelocalizacao">
-                                <p>Nome do Perfil</p>
-                            </div>
-                            <p class="local">São Paulo, Brasil</p>
+                            @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
+                            {
+                                <div class="nomeelocalizacao">
+                                    <p>@user.Nome</p>
+                                </div>
+                            }
                             <div class="icons-publicacao">         
-                                    <img src="imagens/coracao.png" alt="">
-                                    <img src="imagens/cxdialogo.png" alt="">
+                                <img src="imagens/coracao.png" alt="">
+                                <img src="imagens/cxdialogo.png" alt="">
                             </div>
                             <div class="curtidas">
                                 <p>1 curtidas</p>
                             </div>
-                            <div class="comentarios">
-                                <div class="comentarios-pessoas">
-                                    <a href="#">Nome do usuário</a>
-                                    <p>comentário</p>
-                                    <img src="imagens/coracao.png" alt="">
+                            @foreach (Comentario coment in ViewBag.Comentarios.BuscarId(item.IdPublicacao))
+                            {
+                                <div class="comentarios">
+                                    <div class="comentarios-pessoas">
+                                        <a href="#">@coment.UserName</a>
+                                        <p>@coment.Mensagem</p>
+                                        <a class="excluir excluirComent" asp-area="" asp-controller="Publicacao" asp-action="ExcluirComent" asp-route-id="@coment.IdComentario">Excluir</a>
+                                        <img src="imagens/coracao.png" alt="">
+                                    </div>
                                 </div>
-                                <a class="vercoment" href="#">
-                                </p>Ver todos os comentários</p>
-                                </a>
-                            </div>
+                            }
+                        </div> 
                     </div>
-                </div>
+                }
         </section>
     </div>
 </main>

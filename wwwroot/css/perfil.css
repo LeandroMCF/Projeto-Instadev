@@ -188,12 +188,6 @@ body{
     font-size: 14px;
 }
 
-.local{
-    margin-left: 52px;
-    font-family:'Roboto', sans-serif;
-    font-size: 14px;
-     
-}
 .icons-publicacao{
     display: flex;
     margin-left: -50px;
@@ -258,6 +252,19 @@ body{
     height:80px;
     margin: 70px -45px;
  }
+ 
+ .excluir{
+    padding-left: 50px;
+    text-decoration: none;
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+}
+.excluirComent{
+    width: 12px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
 
  .vercoment{
     width: 190px;
