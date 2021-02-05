@@ -4,18 +4,17 @@
     <main>
         <section class="banner flex-justify-align-center">
             <div class="container">
-                @foreach (Usuario item in ViewBag.Usuario)
-                {
+               
                 <aside class="aside_content"> 
                     <div class="editar_content flex-justify-align-center">
-                        <p>@item.UserName</p>
+                        <p>UserName</p>
                     </div>
                 </aside>
                 <div class="content">
                     <div class="content_perfil_foto">
                         <img src="img/fotodeperfil.png" alt="Foto de perfil do usuário">
                             <div class="content_texto">
-                            <h2>@item.Foto</h2>
+                            <h2>Foto</h2>
                             <a href="#">Alterar foto de perfil</a>
                             </div>
                     </div>
@@ -69,7 +68,7 @@
                         <div class="button">
                             <button id="Enviar" type="submit" name="Botao">Enviar</button>
                         </div>
-                    <a asp-area="" asp-controller="Edicao" asp-action="Deletar" asp-route-id="@item.IdUsuario">Desativar minha conta definitivamente</a>
+                    <a asp-area="" asp-controller="Edicao" asp-action="Deletar" asp-route-id="IdUsuario">Desativar minha conta definitivamente</a>
                     </div>
                 </div>
                 }
