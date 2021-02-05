@@ -106,5 +106,10 @@ namespace Projeto_Instadev.Controllers
             return Redirect("~/Publicacao");
         }
 
+        [Route("RedirectPerfil")]
+        public IActionResult Perfil()
+        {
+            return LocalRedirect("~/Perfil");
+        }
     }
 }

@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "PagPerfil";
+}
+
+<main>
+    <div class="container">
+        <section class="infos-perfil">
+            <div class="foto-perfil">
+            @foreach (Usuario item in ViewBag.BuscarNome(int.Parse(ViewBag.IdLogado)))
+            {
+                <img src="..../images/@item.Foto" alt="Foto do Perfil">
+            }
+            </div>
+            <div class="info">
+                    <p>Nome do Perfil</p>     
+    
+                    <div class="seguidores">
+                        <p> 1 publicações</p>
+                        <p> 1 seguindo</p>
+                        <p> 1 seguidores</p>
+                    </div>
+                    <div class="usuario">
+                        <h5>Nome do Perfil</h5>
+                        <a asp-controller="Login" asp-action="Logout">Sair</a>
+                        
+                    </div>
+            </div>
+        </section>
+        <section class="publicacoes">
+        
+            <h4>PUBLICAÇÕES</h4>
+                <div class="publicacao">
+                    <div class="imagem">
+                    <img src="" alt="">
+                    </div>
+                    <div class="info-publicacao">
+                            <div class="imagemperfilpublicacao">
+                                <img src="" alt="">
+                            </div>
+                            <div class="nomeelocalizacao">
+                                <p>Nome do Perfil</p>
+                            </div>
+                            <p class="local">São Paulo, Brasil</p>
+                            <div class="icons-publicacao">         
+                                    <img src="imagens/coracao.png" alt="">
+                                    <img src="imagens/cxdialogo.png" alt="">
+                            </div>
+                            <div class="curtidas">
+                                <p>1 curtidas</p>
+                            </div>
+                            <div class="comentarios">
+                                <div class="comentarios-pessoas">
+                                    <a href="#">Nome do usuário</a>
+                                    <p>comentário</p>
+                                    <img src="imagens/coracao.png" alt="">
+                                </div>
+                                <a class="vercoment" href="#">
+                                </p>Ver todos os comentários</p>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</main>

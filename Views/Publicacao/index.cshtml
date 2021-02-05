@@ -38,7 +38,7 @@
                 <aside class="perfil-lateral">
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
-                        <a href="#"><img src="../images/@item.Foto"></a>                        
+                        <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../images/@item.Foto"></a>                        
                     }
                     <div class="texto">
                         <h2>@ViewBag.Name</h2>
