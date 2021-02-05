@@ -93,6 +93,7 @@ body{
     color:var(--rosa);
 }
 
+
 .fa-door-open::after{
     content:"Sair";
     font-size: 14px;
