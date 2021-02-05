@@ -44,60 +44,8 @@ li{
 }
 .container{
     width: 80%;
-    margin: 100px auto;
+    margin: 20px auto;
 }
-
-
-/*topo
-.topo{
-    background-color:#FFF;
-    width: 100%;
-    height: 53px;
-    
-}
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 935px;
-    height: 100%;
-    margin-left: 492px;
-}
-.barra input{
-    text-align: center;
-    border-radius: 10px;
-    height: 25px;
-    width: 250px;
-    background-color: #FAFAFA;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-family: 14px;
-}
-.icons{
-    height: 53px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.icons img{
-    width: auto;
-    height: auto;
-}
-.logo{
-    width: auto;
-    height: auto;
-}
-.link-logout a{
-    color: red;
-    border-left: solid;
-    border-width: 1px;
-    border-color: black;
-    padding-left: 10px;
-}
-*/
-
-
-
 
 
 
@@ -117,7 +65,7 @@ li{
 }
 .config-stories{
     display: flex;
-    margin-left: 230px;
+    margin-left: 0;
 }
 img{
     width: 62px;
@@ -137,21 +85,35 @@ p{
 }
 .perfil-lateral{
     margin-left: 32px;
-    width: 202px;
+    width: fit-content;
     height: 113px;
     display: flex;
     align-items: center;
 }
+.perfil-lateral img{
+    border-radius:50%;
+    margin-top:-20px;
+}
+
 .texto{
-    margin-left: 21px;
+    margin-left: 15px;
     font-family: var(--font);
     font-size: 16px;
-    font-weight: 600;
     font-style: normal;
+    width:fit-content;
+    margin-top:0px;
+}
+.texto h2{
+    font-size:14px;
+    font-weight:lighter;
 }
 .texto p{
     color: #B6B6B6;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:0;
 }
+
 /*fim stories*/
 
 
@@ -180,7 +142,7 @@ p{
 }
 .imgPefil{
     width: auto;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 .excluir{
     padding-left: 50px;

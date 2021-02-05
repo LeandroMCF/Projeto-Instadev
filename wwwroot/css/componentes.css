@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,59 +10,101 @@
     --cordalinha:#CBCBCB;
     --corplaceholder:#AFAFAF;
     --corborda:#DCDCDC;
-    --fundo:#FAFAFA;
-    
+    --fundo:#FAFAFA; 
+    --roxo: #8134af;
+    --rosa: #dd2a7b;
+    --amarelo: #feda77;
+    --laranja: #f58529;  
 }
 
 body{
-    background-color: #FAFAFA;
-    
+    background-color: #FAFAFA;  
 }
 
 .topo{
     background-color:#FFF;
-    width: 100%;
-    height: 53px;
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    height:53px;  
+    display:flex;
+    justify-content:center;
+    border-bottom:1px solid var(--corborda);
     
 }
+
 .menu{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 935px;
+    justify-content: flex-end;
+    width: 80%;
     height: 100%;
-    margin-left: 492px;
+    margin-left: 20%;
+    margin-right:20%;
 }
 .barra input{
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 25px;
     width: 250px;
     background-color: #FAFAFA;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: 14px;
+    border:1px solid var(--cordalinha);
+    margin-right:120px;
+    margin-left:200px;
 }
+.barra input:hover{
+    border:2px solid gray;
+}
+::-webkit-input-placeholder  {
+     text-align:left; padding-left:15px;
+}
+
 .icons{
     height: 53px;
-    width: 200px;
+    width: 210px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    cursor:pointer;
+    color:gray;
 }
-.icons img{
-    width: auto;
-    height: auto;
+
+.icons i{
+    margin-right:30px;
+    font-size:23px;
+   
 }
+
+.fa-home:hover{
+    color:var(--amarelo);
+}
+.fa-paper-plane:hover{
+    color:var(--roxo);
+}
+.fa-compass:hover{
+    color:var(--laranja);
+}
+.fa-heart:hover{
+    color:var(--rosa);
+}
+.fa-door-open{
+    color:var(--rosa);
+}
+
+.fa-door-open::after{
+    content:"Sair";
+    font-size: 14px;
+    color:gray;
+    font-weight:lighter;
+    padding-left:5px;
+}
+
 .logo{
     width: auto;
     height: auto;
-}
-.link-logout a{
-    color: red;
-    border-left: solid;
-    border-width: 1px;
-    border-color: black;
-    padding-left: 10px;
+    
 }
 
 section{
@@ -80,9 +124,10 @@ section{
     bottom: 0;
     position: fixed;
 }
-.rodape h2{
-    font-size: 14px;
+.rodape p{
+    font-size: 16px;
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#909090;
+    color:#757474;
+    font-weight:bold;
 }
