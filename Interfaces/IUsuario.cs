@@ -9,8 +9,6 @@ namespace Projeto_Instadev.Interfaces
         void Create(Usuario u);
         //Ler
         List<Usuario> ReadAll();
-        //Alterar
-        void Update(Usuario u);
         //Excluir
         void Delete(int id); 
     }

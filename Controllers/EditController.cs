@@ -10,8 +10,8 @@ namespace Projeto_Instadev.Controllers
         [Route("Edicao")]
         public class EdicaoController: Controller
         {
-            Usuario usuarioAntigo = new Usuario();
-            Usuario usuarioEditado = new Usuario();
+            Usuario usuarioModel = new Usuario();
+
             public IActionResult Index()
 
             {
@@ -24,31 +24,43 @@ namespace Projeto_Instadev.Controllers
             public IActionResult Editar(IFormCollection form)
             {
                 //Novo usuário para alteração
+                Usuario User = new Usuario();
+                
+                User.Nome        = form["Nome"];
+                if (User.Nome == null)
+                    {
+                        User.Nome = HttpContext.Session.GetString("_Name");
+                    }
+                User.Foto        = form["Foto"];
+                    
+                
+                User.Email       = form["Email"];
+                if (User.Email == null)
+                    {
+                        User.Email = HttpContext.Session.GetString("_Email");
+                    }
 
-                usuarioEditado.Nome        = form["Nome"];
-                usuarioEditado.Foto        = form["Foto"];
-                usuarioEditado.Email       = form["Email"];
-                usuarioEditado.UserName    = form["UserName"];
+                User.UserName    = form["UserName"];
+                if (User.UserName == null)
+                    {
+                        User.UserName = HttpContext.Session.GetString("_UserName");
+                    }
+
+                User.IdUsuario   = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+                int id = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+                usuarioModel.Update(User, id);
                 
 
-                if(usuarioEditado.Nome != usuarioAntigo.Nome)
-                {
-                    usuarioEditado.Update(usuarioAntigo);
-                }else if(usuarioEditado.Email != usuarioAntigo.Email)
-                {
-                    usuarioEditado.Update(usuarioAntigo);
-                }else if(usuarioEditado.UserName != usuarioAntigo.UserName)
-                {
-                    usuarioEditado.Update(usuarioAntigo);
-                }
                 return LocalRedirect("~/");
-                }
+            }
             
             [Route("Deletar")]
 
             public IActionResult EditarDeletar(int id)
             {
-                usuarioEditado.Delete(id);
+                usuarioModel.Delete(id);
                 return LocalRedirect("~/"); //Qual página?
             }
 
