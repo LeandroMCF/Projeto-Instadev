@@ -8,9 +8,9 @@
 :root{
     --background: #fafafa;
     --content-background: #ffffff;
-    --azul: #515bd4;
-    --roxo: #8134af;
-    --rosa: #dd2a7b;
+    --azul:    #515bd4;
+    --roxo:    #8134af;
+    --rosa:    #dd2a7b;
     --amarelo: #feda77;
     --laranja: #f58529;
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
@@ -98,7 +98,7 @@ p{
     font-style: normal;
 }
 .perfil-lateral{
-    margin-left: 650px;
+    margin-left: 900px;
     width: fit-content;
     height: 113px;
     display: flex;
@@ -149,9 +149,10 @@ p{
 
 
 /*postar*/
-.flex-center-bt img{
+#imagem2{
     border-radius:50%;
-    
+    margin-left:20px;
+    margin-top:20px;
 }
 .postar{
     border: solid;
@@ -214,7 +215,7 @@ p{
     background-color: var(--background);
     border-radius: 5px;
     padding: 6px 30px 6px 30px;
-    width:200px;
+    width:270px;
 }
 .botoes h2{
     border-radius: 5px;
@@ -227,21 +228,23 @@ p{
 }
 
 #escolhaImg{
-    background-color: #d1d1d1;
+    background-color: #7d7d7d;
     width: auto;
     color: #7d7d7d;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 8px 5px 8px;
     border-radius: 5px;
     width:132px;
 }
 #postarImg{
     background-color: #2686CC;
     color: white;
-    padding: 5px 10px 5px 10px;
+    padding: 7px 10px 7px 10px;
     border-radius: 5px;
     margin-bottom: 2.5px;
     width:150px;
+    cursor:pointer;
 }
+
 /*fim postar*/
 
 

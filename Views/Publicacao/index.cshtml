@@ -58,7 +58,7 @@
             <div class="itens">
                 @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
-                        <img src="../images/@item.Foto">                  
+                        <img id="imagem2"src="../images/@item.Foto">                  
                     }
                 <div class="texto">
                     <h2>Postar</h2>
@@ -67,7 +67,7 @@
             <form action='@Url.Action("Publicar")' method="POST" class="botoes" enctype="multipart/form-data">
 
                 <div>
-                    <input type="text" autocomplete="off" name="descricao" placeholder="Digite a descriçao da imagem">
+                    <input type="text" autocomplete="off" name="descricao" placeholder="Digite a descrição da imagem...">
                 </div>
 
                 <div>
