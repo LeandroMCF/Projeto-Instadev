@@ -14,7 +14,7 @@
             <div class="info">
                 @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
                 {
-                    <p>@user.Nome</p>     
+                    <p>@user.UserName</p>     
                 }
                     <div class="seguidores">
                         <p> 1 publicações</p>
@@ -48,7 +48,7 @@
                             @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
                             {
                                 <div class="nomeelocalizacao">
-                                    <p>@user.Nome</p>
+                                    <p>@user.UserName</p>
                                 </div>
                             }
                             <div class="icons-publicacao">         
@@ -64,7 +64,7 @@
                                     <div class="comentarios-pessoas">
                                         <a href="#">@coment.UserName</a>
                                         <p>@coment.Mensagem</p>
-                                        <a class="excluir excluirComent" asp-area="" asp-controller="Publicacao" asp-action="ExcluirComent" asp-route-id="@coment.IdComentario">Excluir</a>
+                                        <a class="excluir excluirComent" asp-area="" asp-controller="PaginaPerfil" asp-action="ExcluirComent" asp-route-id="@coment.IdComentario">Excluir</a>
                                         <img src="imagens/coracao.png" alt="">
                                     </div>
                                 </div>

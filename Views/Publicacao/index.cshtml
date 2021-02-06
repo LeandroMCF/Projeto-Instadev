@@ -41,8 +41,8 @@
                         <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../images/@item.Foto"></a>                        
                     }
                     <div class="texto">
-                        <h2>@ViewBag.Name</h2>
-                        <p>@ViewBag.UserName</p>
+                        <h2>@ViewBag.UserName</h2>
+                        <p>@ViewBag.Name</p>
                     </div>
                 </aside>
         </section>
@@ -87,7 +87,7 @@
                         <div class="texto">
                             @foreach (Usuario item2 in ViewBag.Usuario.BuscarNome(item.IdUser))
                             {
-                                <h2>@item2.Nome</h2>                                
+                                <h2>@item2.UserName</h2>                                
                             }
                         </div>
                         @if (ViewBag.IdLogado == item.IdUser.ToString())
@@ -112,7 +112,7 @@
                         <div class="comentario legenda">
                             @foreach (Usuario item2 in ViewBag.Usuario.BuscarNome(item.IdUser))
                             {
-                                <h2>@item2.Nome</h2>
+                                <h2>@item2.UserName</h2>
                             }
                             <p>@item.Legenda</p>
                         </div>

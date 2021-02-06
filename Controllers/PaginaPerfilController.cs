@@ -12,6 +12,7 @@ namespace Projeto_Instadev.Controllers
     {
         Publicacao publi = new Publicacao();
         Usuario user = new Usuario();
+        Comentario comentario = new Comentario();
 
         public IActionResult Index()
         {
@@ -22,6 +23,15 @@ namespace Projeto_Instadev.Controllers
             ViewBag.IdUser = HttpContext.Session.GetString("_UserId");        
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             return View();
+        }
+
+        [Route("Excluir")]
+        public IActionResult ExcluirComent(int id)
+        {
+            comentario.ExcluirComentario(id);
+            ViewBag.Comentario = new Comentario();
+            
+            return LocalRedirect("~/PaginaPerfil");
         }
     }
 }

@@ -141,7 +141,7 @@ body{
 .publicacoes h4{
     font-size: 16px;
     margin-top: -60px;
-    margin-left: 250px;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -219,14 +219,13 @@ body{
 
 .comentarios-pessoas{
     display:flex;
-    margin-top: -50px;
 }
 
 .comentarios-pessoas a{
     color: black;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     
 }
@@ -237,33 +236,33 @@ body{
 }
 
 .comentarios-pessoas p{
+    font-size: 13px;
     margin-left: 13px;
     font-family: 'Roboto', sans-serif;
     
 }
    
 .comentarios-pessoas img{
-    margin-left:200px;
+    margin-left:100px;
     cursor: pointer;
 }
 
  .comentarios{
     width:690px;
-    height:80px;
-    margin: 70px -45px;
+    margin: 17px -45px;
  }
  
- .excluir{
+ .comentarios .excluir{
+    font-size: 13px;
     padding-left: 50px;
     text-decoration: none;
     color: red;
     display: flex;
     justify-content: flex-end;
 }
-.excluirComent{
+.comentarios .excluirComent{
     width: 12px;
     margin-left: 25px;
-    margin-top: 10px;
 }
 
  .vercoment{
