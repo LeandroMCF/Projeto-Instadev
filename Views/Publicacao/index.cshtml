@@ -37,8 +37,6 @@
                 </div>
             </div>
                 <aside class="perfil-lateral">
-
->>>>>>> FPagCadastro
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
                         <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../images/@item.Foto"></a>                        
