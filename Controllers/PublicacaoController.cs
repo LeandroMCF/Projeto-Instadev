@@ -104,6 +104,7 @@ namespace Projeto_Instadev.Controllers
             comentario.CriarComentario(coment);
 
             return Redirect("~/Publicacao");
+            
         }
 
         [Route("RedirectPerfil")]

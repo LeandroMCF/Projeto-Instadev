@@ -14390,6 +14390,62 @@
     "CSharpLanguageVersion": 800
   },
   "RootNamespace": "Projeto_Instadev",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Publicacao\\index.cshtml",
+      "TargetPath": "Views\\Publicacao\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Edicao\\index.cshtml",
+      "TargetPath": "Views\\Edicao\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Usuario\\index.cshtml",
+      "TargetPath": "Views\\Usuario\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\PaginaPerfil\\index.cshtml",
+      "TargetPath": "Views\\PaginaPerfil\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\leand\\OneDrive\\Área de Trabalho\\Projeto-Instadev\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

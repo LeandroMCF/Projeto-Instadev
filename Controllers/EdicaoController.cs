@@ -5,8 +5,8 @@ using Projeto_Instadev.Models;
 
 namespace Projeto_Instadev.Controllers
 {
-    public class EditController
-    {
+    
+    
         [Route("Edicao")]
         public class EdicaoController: Controller
         {
@@ -66,4 +66,4 @@ namespace Projeto_Instadev.Controllers
 
             }
         }
-    }
+    

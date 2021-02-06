@@ -37,26 +37,23 @@
                 </div>
             </div>
                 <aside class="perfil-lateral">
-<<<<<<< HEAD
-                    <a asp-area="" asp-controller="Edicao" asp-action="Index">Editar</a>
-=======
->>>>>>> FPagFeed
+
+>>>>>>> FPagCadastro
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
                         <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../images/@item.Foto"></a>                        
                     }
                     <div class="texto">
-<<<<<<< HEAD
-                        <h2>@ViewBag.Username</h2>
-=======
                         <h2>@ViewBag.UserName</h2>
->>>>>>> FPagFeed
                         <p>@ViewBag.Name</p>
                     </div>
                 </aside>
         </section>
     </main>
     <!--Fim stories-->
+
+    
+
     <!--Postar-->
     <main>
         <section class="postar flex-center-bt">
