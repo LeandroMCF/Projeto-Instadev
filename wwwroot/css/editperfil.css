@@ -29,7 +29,7 @@ body{
 .container{
     max-width: 900px;
     width: 100%;
-    max-height: 610px;
+    max-height: 800px;
     height: 100%;
     display: flex;
     background-color: var(--backgroundbox);
@@ -55,10 +55,11 @@ body{
 
 .content_perfil{
     justify-content: center;
-    display: flex;
+    /* display: flex; */
     width: 75%;
     margin-top: 2.5%;
 }
+
 
 .content_texto{
     margin-left: 3.5%;
@@ -107,4 +108,72 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*topo*/
+.topo{
+    background-color:#FFF;
+    width: 100%;
+    height: 53px;
+    
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 935px;
+    height: 100%;
+    margin-left: 492px;
+}
+.barra input{
+    text-align: center;
+    border-radius: 10px;
+    height: 25px;
+    width: 250px;
+    background-color: #FAFAFA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 14px;
+}
+.icons{
+    height: 53px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icons img{
+    width: auto;
+    height: auto;
+}
+.logo{
+    width: auto;
+    height: auto;
+}
+.link-logout a{
+    color: red;
+    border-left: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 10px;
+}
+/*footer*/
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #FFF;
+    border-top: solid;
+    border-width: 1px;
+    border-color: #f1f1f1;
+    margin-top: 5px;
+    bottom: 0;
+    position: fixed;
+}
+.rodape h2{
+    font-size: 14px;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#909090;
 }
