@@ -6,6 +6,7 @@
 <div class="container">
     <main>
         <section class="config-stories">
+            <div class="usuarioson">
             <div class="stories flex-center-bt">
                 <div class="perfil-stories">
                     <a href="#"><img src="../images/vin-diesel.png" alt="#"></a>
@@ -36,8 +37,8 @@
                     <p>Chaves_Metal</p>
                 </div>
             </div>
+            </div>
                 <aside class="perfil-lateral">
-                    <a asp-area="" asp-controller="Edicao" asp-action="Index">Editar</a>
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
                         <a href="#"><img src="../images/@item.Foto"></a>                        

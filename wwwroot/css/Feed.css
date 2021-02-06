@@ -27,7 +27,7 @@ body{
     align-items: center;
     justify-content: space-between;
     margin-top:30px;
-    margin-left:0;
+    margin-left:-30px;
 }
 img{
     width: 100%;
@@ -45,7 +45,7 @@ li{
 }
 .container{
     width: 80%;
-    height:100%;
+   
 }
 
 
