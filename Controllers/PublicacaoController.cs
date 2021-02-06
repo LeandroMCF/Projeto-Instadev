@@ -20,7 +20,7 @@ namespace Projeto_Instadev.Controllers
             ViewBag.Usuario = new Usuario();
             ViewBag.Comentarios = new Comentario();
             ViewBag.Name = HttpContext.Session.GetString("_Name");
-            ViewBag.IdLogado = HttpContext.Session.GetString("_UserId");
+            ViewBag.IdLogado = HttpContext.Session.GetString("_UserId");        
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             return View();
         }
@@ -106,5 +106,10 @@ namespace Projeto_Instadev.Controllers
             return Redirect("~/Publicacao");
         }
 
+        [Route("RedirectPerfil")]
+        public IActionResult Perfil()
+        {
+            return LocalRedirect("~/Perfil");
+        }
     }
 }
