@@ -22,20 +22,20 @@ body{
 }
 .topo{
     background-color:#FFF;
-    width: 90%;
+    width: 80%;
     height: 53px;
     border-bottom:2px solid #F1F1F1;
-    display:flex;
-    justify-content:center;
+    margin-right:10%;
+    margin-left:0;
+
 }
 .menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
+    width: 50%;
     height: 100%;
     margin-left: 0;
+    margin-right:200px;
 }
+
 .barra input{
     text-align: center;
     border-radius: 10px;

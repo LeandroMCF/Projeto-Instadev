@@ -23,11 +23,11 @@ body{
 .topo{
     background-color:#FFF;
     width:100%;
-    padding-left:10%;
-    padding-right:10%;
+    padding-left:8%;
+    padding-right:8%;
     height:53px;  
     display:flex;
-    justify-content:center;
+    justify-content:left;
     border-bottom:1px solid var(--corborda);
     
 }
@@ -35,12 +35,13 @@ body{
 .menu{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 80%;
+    justify-content: left;
+    width: 60%;
     height: 100%;
-    margin-left: 20%;
+    margin-left:20%;
     margin-right:20%;
 }
+
 .barra input{
     text-align: center;
     border-radius: 5px;
@@ -50,8 +51,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: 14px;
     border:1px solid var(--cordalinha);
+    margin-left:250px;
     margin-right:120px;
-    margin-left:200px;
+  
 }
 .barra input:hover{
     border:2px solid gray;

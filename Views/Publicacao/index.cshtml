@@ -6,8 +6,9 @@
 <div class="container">
     <main>
         <section class="config-stories">
-            <div class="usuarioson">
+           
             <div class="stories flex-center-bt">
+                
                 <div class="perfil-stories">
                     <a href="#"><img src="../images/vin-diesel.png" alt="#"></a>
                     <p>Vin_Disel</p>
@@ -37,7 +38,7 @@
                     <p>Chaves_Metal</p>
                 </div>
             </div>
-            </div>
+        </section>
                 <aside class="perfil-lateral">
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
@@ -48,7 +49,7 @@
                         <p>@ViewBag.Name</p>
                     </div>
                 </aside>
-        </section>
+        
     </main>
     <!--Fim stories-->
     <!--Postar-->
