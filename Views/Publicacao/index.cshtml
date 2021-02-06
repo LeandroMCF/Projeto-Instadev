@@ -1,3 +1,4 @@
+@using Projeto_Instadev.Models
 @model Comentario
 @{
     ViewData["Title"] = "Feed";
@@ -35,22 +36,28 @@
                     <p>Chaves_Metal</p>
                 </div>
             </div>
-            <aside class="perfil-lateral">
-                <a href="#"><img src="../images/thank-you 2.png"></a>
-                <div class="texto">
-                    <h2>Yes_Baby</h2>
-                    <p>Marcos Jeeves</p>
-                </div>
-            </aside>
+                <aside class="perfil-lateral">
+                    <a asp-area="" asp-controller="Edicao" asp-action="Index">Editar</a>
+                    @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
+                    {
+                        <a href="#"><img src="../images/@item.Foto"></a>                        
+                    }
+                    <div class="texto">
+                        <h2>@ViewBag.Username</h2>
+                        <p>@ViewBag.Name</p>
+                    </div>
+                </aside>
         </section>
     </main>
     <!--Fim stories-->
     <!--Postar-->
     <main>
-
         <section class="postar flex-center-bt">
             <div class="itens">
-                <img src="../images/thank-you 2.png">
+                @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
+                    {
+                        <img src="../images/@item.Foto">                  
+                    }
                 <div class="texto">
                     <h2>Postar</h2>
                 </div>
@@ -75,12 +82,20 @@
             {
                 <div class="postagem">
                     <div class="perfil-post">
-                        <a href="#"><img src="../images/gabigordo 1.png" alt="#"></a>
+                        @foreach (Usuario item2 in ViewBag.Usuario.BuscarNome(item.IdUser))
+                        {
+                            <a href="#"><img class="imgPerfil" src="~/images/@item2.Foto" alt=""></a>
+                        }
                         <div class="texto">
-                            <h2>gabigordo</h2>
-                            <p>Flamengo, Rj</p>
+                            @foreach (Usuario item2 in ViewBag.Usuario.BuscarNome(item.IdUser))
+                            {
+                                <h2>@item2.Nome</h2>                                
+                            }
                         </div>
-                        <a class="excluir" asp-area="" asp-controller="Publicacao" asp-action="Excluir" asp-route-id="@item.IdPublicacao">Excluir</a>
+                        @if (ViewBag.IdLogado == item.IdUser.ToString())
+                        {
+                            <a class="excluir" asp-area="" asp-controller="Publicacao" asp-action="Excluir" asp-route-id="@item.IdPublicacao">Excluir</a>
+                        }
                     </div>
                     <div class="imagem-post">
                         <img src="~/img/publicacao/@item.Imagem">
@@ -96,15 +111,22 @@
 
                     </div>
                     <div class="comentarios">
-                        <div class="comentario">
-                            <h2>gabigordo</h2>
+                        <div class="comentario legenda">
+                            @foreach (Usuario item2 in ViewBag.Usuario.BuscarNome(item.IdUser))
+                            {
+                                <h2>@item2.Nome</h2>
+                            }
                             <p>@item.Legenda</p>
                         </div>
                         @foreach (Comentario coment in ViewBag.Comentarios.BuscarId(item.IdPublicacao))
                         {
-                            <div class="comentario">
-                                <h2>Yes_Baby</h2>
+                            <div class="comentario">                               
+                                <h2>@coment.UserName</h2>
                                 <p>@coment.Mensagem</p>
+                                @if (ViewBag.IdLogado == coment.IdUser.ToString())
+                                {
+                                    <a class="excluir excluirComent" asp-area="" asp-controller="Publicacao" asp-action="ExcluirComent" asp-route-id="@coment.IdComentario">Excluir</a>
+                                } 
                             </div>
                         } 
                     </div>

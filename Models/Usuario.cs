@@ -63,11 +63,11 @@ namespace Projeto_Instadev.Models
         }
 
         //Método para alterar um usuário
-        public void Update(Usuario u)
+        public void Update(Usuario p, int id)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == u.IdUsuario.ToString());
-            linhas.Add( PrepararLinha(u) );                        
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            linhas.Add( PrepararLinha(p) );                        
             RewriteCSV(PATH, linhas); 
         }
 
@@ -103,6 +103,11 @@ namespace Projeto_Instadev.Models
             }
             
             return existe;
+        }
+        public List<Usuario> BuscarNome(int id_user)
+        {
+            List<Usuario> usersId = ReadAll().FindAll(x => x.IdUsuario == id_user);
+            return usersId;
         }
     }
 }

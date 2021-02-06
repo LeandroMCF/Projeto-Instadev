@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --azul: #2686cc;
+    --cordalinha:#CBCBCB;
+    --corplaceholder:#AFAFAF;
+    --corborda:#DCDCDC;
+    --fundo:#FAFAFA;
+    --erro:#8134AF;
+}
+
 body{
     background-color: #FAFAFA;
 }
@@ -38,11 +47,12 @@ body{
     width: 80%;
     height: 35px;
     margin-bottom: 10px;
-    padding-left: 5px;;   
+    padding-left: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 11px;
     background-color:#FAFAFA;
-    border:none;
+    border:1px solid var(--corborda);
+    border-radius:2px;
 }
 #cadastrar{
     background-color: #2686CC;
@@ -52,6 +62,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12px;
     margin-top: 10px;
+    cursor:pointer;
+    border:1px transparent solid;
+    border-radius:2px;
 }
 .cadastro h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

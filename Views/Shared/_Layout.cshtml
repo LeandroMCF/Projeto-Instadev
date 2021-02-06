@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Projeto_Instadev</title> 
 
-
+    <link rel="stylesheet" href="~/css/componentes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        
     @switch (ViewData["Title"].ToString())
         {
             case "Feed":
@@ -20,9 +22,12 @@
             case "Login":
                 <link rel="stylesheet" href="~/css/Loginstyle.css"/>
             break;
+            
+            case "Edicao":
+                <link rel="stylesheet" href="~/css/editperfil.css"/>
+            break;
         }
-        @* <link rel="stylesheet" href="~/css/paginaperfil.css"/>
-        <link rel="stylesheet" href="~/css/editperfil.css"/> *@
+        @* <link rel="stylesheet" href="~/css/paginaperfil.css"/>*@
 </head>
 <body>
     @if(ViewData["Title"].ToString() != "Login" && ViewData["Title"].ToString() != "Cadastro"){
@@ -39,17 +44,13 @@
                 </form>
                 
                 <div class="icons">
-                    <a href="#">
-                        <img src="../images/home.png" alt="Botão Home">
-                    </a>
-                    <img src="../images/plane 1.png" alt="Botão Direct">
-                    <img src="../images/compass 1.png" alt="Botão Histórico">
-                    <img src="../images/coracao.png" alt="Botão Curtidas">
-                    <a href="#">
-                        <img class="logo" src="../images/logo_Instadev.png" alt="Logo do site InstaDev">
-                    </a>
-                       
-                    <li><a asp-area="" asp-controller="Login" asp-action="Logout" title="Deslogar">Log out</a></li>
+                     <i class="fas fa-home" alt="Botão Home"></i> 
+                    <i class="far fa-paper-plane" alt="Botão Direct"></i> 
+                    <i class="far fa-compass" alt="Botão Histórico"></i> 
+                    <i class="far fa-heart" alt="Botão Curtidas"></i>
+                    <div class="link-logout">    
+                        <li><a asp-area="" asp-controller="Login" asp-action="Logout" title="Deslogar"><i class="fas fa-door-open" alt="Sair"></i></a></li> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
 
     @if(ViewData["Title"].ToString() != "Login" && ViewData["Title"].ToString() != "Cadastro"){
         <footer>
-            <h2 class="rodape">© 2021 InstaDev do SENAI</h2>
+            <p class="rodape">© 2021 InstaDev do SENAI</p>
         </footer>
     }
 

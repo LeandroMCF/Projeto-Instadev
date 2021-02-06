@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Perfil</title>
+        <link rel="stylesheet" href="css/perfil.css">
+    </head>
+   <!--Não precisa colocar header aqui! já está no layout!!!!!-->
+    <body>
+        <main>
+            <div class="container">
+
+                <section class="infos-perfil">
+
+                    <div class="foto-perfil">
+                        <img src="../images/padrao.png" alt="Foto do Perfil">
+                    </div>
+
+                    <div class="info">
+
+                            <p>Nome do Perfil</p>     
+            
+                            <div class="seguidores">
+                                <p> 1 publicações</p>
+                                <p> 1 seguindo</p>
+                                <p> 1 seguidores</p>
+                            </div>
+
+                            <div class="usuario">
+                                <h5>Nome do Perfil</h5>
+                                <a asp-controller="Login" asp-action="Logout">Sair</a>
+                                
+                            </div>
+                    </div>
+                </section>
+
+                <section class="publicacoes">
+                
+                    <h4>PUBLICAÇÕES</h4>
+
+                        <div class="publicacao">
+
+                            <div class="imagem">
+                            <img src="../images/padrao.png" alt="">
+                            </div>
+
+                            <div class="info-publicacao">
+                                    <div class="imagemperfilpublicacao">
+                                        <img src="../images/padrao.png" alt="">
+                                    </div>
+
+                                    <div class="nomeelocalizacao">
+                                        <p>Nome do Perfil</p>
+                                    </div>
+
+                                    <p class="local">São Paulo, Brasil</p>
+
+                                    <div class="icons-publicacao">         
+                                            <img src="../images/coracao.png" alt="">
+                                            <img src="../images/cxdialogo.png" alt="">
+                                    </div>
+
+                                    <div class="curtidas">
+                                        <p>1 curtidas</p>
+                                    </div>
+
+                                    <div class="comentarios">
+                                        <div class="comentarios-pessoas">
+                                            <a href="#">Nome do usuário</a>
+                                            <p>comentário</p>
+                                            <img src="../images/coracao.png" alt="">
+                                        </div>
+
+                                        <a class="vercoment" href="#">
+                                        </p>Ver todos os comentários</p>
+                                        </a>
+
+                                    </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </main>
+       <!--Não precisa colocar footer aqui! já está no layout!!!!!--> 
+    </body>
+</html>
