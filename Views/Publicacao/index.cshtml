@@ -1,3 +1,4 @@
+@using Projeto_Instadev.Models
 @model Comentario
 @{
     ViewData["Title"] = "Feed";
@@ -36,14 +37,14 @@
                 </div>
             </div>
                 <aside class="perfil-lateral">
-                    <a asp-area="" asp-controller="Edicao" asp-action="index">sorry</a>
+                    <a asp-area="" asp-controller="Edicao" asp-action="Index">Editar</a>
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
                         <a href="#"><img src="../images/@item.Foto"></a>                        
                     }
                     <div class="texto">
-                        <h2>@ViewBag.Name</h2>
-                        <p>@ViewBag.UserName</p>
+                        <h2>@ViewBag.Username</h2>
+                        <p>@ViewBag.Name</p>
                     </div>
                 </aside>
         </section>

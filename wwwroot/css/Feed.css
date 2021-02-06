@@ -20,19 +20,20 @@ body{
     font-size: 13px;
     background-color: var(--background);
     width: 100%;
-    height: 100%;
+    height:100%;
 }
 .flex-center-bt{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top:30px;
+    margin-left:0;
 }
 img{
     width: 100%;
 }
 main{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
 }
@@ -44,7 +45,7 @@ li{
 }
 .container{
     width: 80%;
-    margin: 20px auto;
+   
 }
 
 
@@ -52,6 +53,9 @@ li{
 
 
 /*stories*/
+section{
+    height:fit-content;
+}
 .stories{
     width: 610px;
     height: 113px;
@@ -65,8 +69,10 @@ li{
 }
 .config-stories{
     display: flex;
-    margin-left: 0;
+    margin-left:30px;
+
 }
+
 img{
     width: 62px;
     height: 62px;
@@ -84,11 +90,13 @@ p{
     font-style: normal;
 }
 .perfil-lateral{
-    margin-left: 32px;
+    margin-left: 10px;
     width: fit-content;
     height: 113px;
     display: flex;
     align-items: center;
+    margin-bottom:10px;
+    margin-top:30px;
 }
 .perfil-lateral img{
     border-radius:50%;
@@ -104,14 +112,15 @@ p{
     margin-top:0px;
 }
 .texto h2{
-    font-size:14px;
+    font-size:16px;
+    font-weight:600;
     font-weight:lighter;
 }
 .texto p{
     color: #B6B6B6;
-    font-size:20px;
-    font-weight:bold;
-    margin-top:0;
+    font-size:16px;
+    font-weight:600;
+    margin-top:3px;
 }
 
 /*fim stories*/
@@ -128,6 +137,9 @@ p{
 
 
 /*postar*/
+.flex-center-bt img{
+    border-radius:50%;
+}
 .postar{
     border: solid;
     border-width: 1px;
@@ -137,7 +149,7 @@ p{
     display: flex;
     align-items: flex-start;
     background-color: var(--content-background);
-    margin-top: 38px;
+    margin-top: 10px;
     flex-direction: column;
 }
 .imgPefil{
@@ -228,7 +240,7 @@ p{
     border-width: 1px;
     width: 610px;
     height: 610px;
-    margin-top: 38px;
+    margin-top:10px;
 }
 .perfil-post{
     display: flex;
@@ -242,6 +254,7 @@ p{
 .perfil-post img{
     width: 34px;
     height: 34px;
+    border-radius:50%;
 }
 .perfil-post h2{
     font-size: 13px;
@@ -308,24 +321,3 @@ p{
 
 
 
-/*footer*/
-.rodape{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    background-color: #FFF;
-    border-top: solid;
-    border-width: 1px;
-    border-color: #f1f1f1;
-    margin-top: 5px;
-    bottom: 0;
-    position: fixed;
-}
-.rodape h2{
-    font-size: 14px;
-    display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#909090;
-}
