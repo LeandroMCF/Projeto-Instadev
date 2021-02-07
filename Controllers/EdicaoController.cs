@@ -11,6 +11,8 @@ namespace Projeto_Instadev.Controllers
     public class EdicaoController: Controller
     {
         Usuario usuarioModel = new Usuario();
+        Comentario comentario = new Comentario();
+        Publicacao publicacao = new Publicacao();
 
         public IActionResult Index()
 
@@ -70,6 +72,9 @@ namespace Projeto_Instadev.Controllers
         {
                 id = int.Parse(HttpContext.Session.GetString("_UserId"));
                 usuarioModel.Delete(id);
+                publicacao.Deletepubli(id);
+                comentario.DeleteComent(id);
+
                 return LocalRedirect("~/"); //Qual página?
         }
 

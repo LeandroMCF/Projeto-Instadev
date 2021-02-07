@@ -188,6 +188,7 @@ body{
     /* background-color: rgba(255, 255, 0, 0.76); */
     font-family: var(--font);
     color: #000;
+    padding-right: 80px;
 }
 
 .endereco-email{
@@ -203,6 +204,7 @@ body{
     font-size: 14px;
     font-weight: 600;
     margin: 0 0.9em;
+    width: 55px;
 }
 
 .input-email{

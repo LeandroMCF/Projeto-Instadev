@@ -110,5 +110,12 @@ namespace Projeto_Instadev.Models
             List<Comentario> comentarios = ReadAll().FindAll(x => x.IdUser == id_user);
             return comentarios;
         }
+
+         public void DeleteComent(int idUsuario)
+        {
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll(x => x.Split(";")[2] == idUsuario.ToString());                        
+            RewriteCSV(PATH, linhas);
+        }
     }
 }

@@ -12,12 +12,13 @@
                 }
                 </div>
             <div class="info">
-                @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
-                {
-                    <p>@user.UserName</p>     
-                }
-                <a asp-area="" asp-controller="Edicao" asp-action="Index">Editar</a>
-                <a asp-area="" asp-controller="Edicao" asp-action="EditarDeletar">Excluir</a>
+                <div class="nome-links">
+                    @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
+                    {
+                        <p>@user.UserName</p>     
+                    }
+                    <a class="editar" asp-area="" asp-controller="Edicao" asp-action="Index">Editar</a>
+                </div>
                     <div class="seguidores">
                         <p> 1 publicações</p>
                         <p> 1 seguindo</p>

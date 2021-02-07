@@ -92,6 +92,20 @@ body{
 
 }
 
+.nome-links{
+    display: flex;
+}
+.nome-links a{
+    text-decoration: none;
+}
+
+.editar{
+    font-size: 13px;
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1em;
+}
+
 .info p{
     font-size:20px;
     font-weight:bold;

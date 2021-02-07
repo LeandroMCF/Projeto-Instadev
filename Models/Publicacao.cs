@@ -96,5 +96,12 @@ namespace Projeto_Instadev.Models
             List<Publicacao> publicacaos = ReadAll().FindAll(x => x.IdUser == id_user);
             return publicacaos;
         }
+         public void Deletepubli(int idUsuario)
+        {
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            // 1;FLA;fla.png
+            linhas.RemoveAll(x => x.Split(";")[1] == idUsuario.ToString());                        
+            RewriteCSV(PATH, linhas);
+        }
     }
 }
