@@ -121,7 +121,15 @@ form{
     justify-content:center;
 }
 .erro{
-    color: var(--erro);
+    color: white;
+    width:240px;
+    padding:10px;
+    position:absolute;
+    margin-left:550px;
+    border-radius:5px;
+    margin-top:-810px;
+    background-color:#dd2a7b;
+    border:2px solid white;
 }
 
 
