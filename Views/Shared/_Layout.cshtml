@@ -40,6 +40,7 @@
     @if(ViewData["Title"].ToString() != "Login" && ViewData["Title"].ToString() != "Cadastro"){
     <header>
         <div class="topo">
+            
             <div class="menu">
 
                 <a href="#">
@@ -51,7 +52,7 @@
                 </form>
                 
                 <div class="icons">
-                     <i class="fas fa-home" alt="Botão Home"></i> 
+                    <i class="fas fa-home" alt="Botão Home"></i> 
                     <i class="far fa-paper-plane" alt="Botão Direct"></i> 
                     <i class="far fa-compass" alt="Botão Histórico"></i> 
                     <i class="far fa-heart" alt="Botão Curtidas"></i>
@@ -59,18 +60,19 @@
                         <li><a asp-area="" asp-controller="Login" asp-action="Logout" title="Deslogar"><i class="fas fa-door-open" alt="Sair"></i></a></li> 
                     </div>
                 </div>
+                </div>
             </div>
-        </div>
+    
     </header>
     }
 
     @RenderBody()   
 
-    @if(ViewData["Title"].ToString() != "Login" && ViewData["Title"].ToString() != "Cadastro"){
+    <!---@if(ViewData["Title"].ToString() != "Login" && ViewData["Title"].ToString() != "Cadastro"){
         <footer>
             <p class="rodape">© 2021 InstaDev do SENAI</p>
         </footer>
-    }
+    }-->
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

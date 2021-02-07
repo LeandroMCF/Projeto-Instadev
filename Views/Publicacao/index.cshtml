@@ -6,7 +6,9 @@
 <div class="container">
     <main>
         <section class="config-stories">
+           
             <div class="stories flex-center-bt">
+                
                 <div class="perfil-stories">
                     <a href="#"><img src="../images/vin-diesel.png" alt="#"></a>
                     <p>Vin_Disel</p>
@@ -36,6 +38,7 @@
                     <p>Chaves_Metal</p>
                 </div>
             </div>
+        </section>
                 <aside class="perfil-lateral">
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
@@ -46,7 +49,7 @@
                         <p>@ViewBag.Name</p>
                     </div>
                 </aside>
-        </section>
+        
     </main>
     <!--Fim stories-->
 
@@ -58,7 +61,7 @@
             <div class="itens">
                 @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
-                        <img src="../images/@item.Foto">                  
+                        <img id="imagem2"src="../images/@item.Foto">                  
                     }
                 <div class="texto">
                     <h2>Postar</h2>
@@ -67,7 +70,7 @@
             <form action='@Url.Action("Publicar")' method="POST" class="botoes" enctype="multipart/form-data">
 
                 <div>
-                    <input type="text" autocomplete="off" name="descricao" placeholder="Digite a descriçao da imagem">
+                    <input type="text" autocomplete="off" name="descricao" placeholder="Digite a descrição da imagem...">
                 </div>
 
                 <div>
