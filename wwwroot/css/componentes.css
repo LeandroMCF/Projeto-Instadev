@@ -52,7 +52,7 @@ body{
     font-family: 14px;
     border:1px solid var(--cordalinha);
     margin-left:250px;
-    margin-right:120px;
+    margin-right:70px;
   
 }
 .barra input:hover{
@@ -73,7 +73,7 @@ body{
 }
 
 .icons i{
-    margin-right:30px;
+    margin-right:20px;
     font-size:23px;
    
 }
