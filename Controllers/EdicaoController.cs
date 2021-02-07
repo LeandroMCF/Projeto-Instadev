@@ -7,72 +7,72 @@ namespace Projeto_Instadev.Controllers
 {
     
     
-        [Route("Edicao")]
-        public class EdicaoController: Controller
+    [Route("Edicao")]
+    public class EdicaoController: Controller
+    {
+        Usuario usuarioModel = new Usuario();
+
+        public IActionResult Index()
+
         {
-            Usuario usuarioModel = new Usuario();
-
-            public IActionResult Index()
-
-            {
-                ViewBag.UserName = HttpContext.Session.GetString("_UserName");
-                return View();
-            }
+            ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            return View();
+        }
 
             
-            [Route("Editar")]
-            public IActionResult Editar(IFormCollection form)
-            {
-                //Novo usuário para alteração
-                Usuario User = new Usuario();
-                
-                User.Foto = form["Foto"];
-                User.Nome = form["Nome"];
-                User.UserName = form["UserName"];
-                User.Email = form["Email"];
-                User.Senha = form["Senha"];
-                User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
-
-
-                if (User.Nome == null)
-                    {
-                        User.Nome = HttpContext.Session.GetString("_Name");
-                    }
-                if (User.Foto == null)
-                    {
-                        User.Foto = HttpContext.Session.GetString("_Foto");
-                    }
-                if (User.Email == null)
-                    {
-                        User.Email = HttpContext.Session.GetString("_Email");
-                    }
-
-                if (User.UserName == null)
-                    {
-                        User.UserName = HttpContext.Session.GetString("_UserName");
-                    }
-                if (User.Senha == null)
-                    {
-                        User.Senha = HttpContext.Session.GetString("_Senha");
-                    }
-
-                
-                int id = int.Parse(HttpContext.Session.GetString("_UserId"));
-                
-                usuarioModel.Update(User, id);
-                
-
-                return LocalRedirect("~/");
-            }
+        [Route("Editar")]
+        public IActionResult Editar(IFormCollection form)
+        {
+            //Novo usuário para alteração
+            Usuario User = new Usuario();
             
-            [Route("Deletar")]
+            User.Foto = form["Foto"];
+            User.Nome = form["Nome"];
+            User.UserName = form["UserName"];
+            User.Email = form["Email"];
+            User.Senha = form["Senha"];
+            User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
 
-            public IActionResult EditarDeletar(int id)
-            {
+
+            if (User.Nome == null)
+                {
+                    User.Nome = HttpContext.Session.GetString("_Name");
+                }
+            if (User.Foto == null)
+                {
+                    User.Foto = HttpContext.Session.GetString("_Foto");
+                }
+            if (User.Email == null)
+                {
+                    User.Email = HttpContext.Session.GetString("_Email");
+                }
+            if (User.UserName == null)
+                {
+                    User.UserName = HttpContext.Session.GetString("_UserName");
+                }
+            if (User.Senha == null)
+                {
+                    User.Senha = HttpContext.Session.GetString("_Senha");
+                }
+                
+
+            int id = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+            usuarioModel.Update(User, id);
+                
+
+            return LocalRedirect("~/PaginaPerfil");
+        }
+            
+        [Route("Deletar")]
+
+        public IActionResult EditarDeletar(int id)
+        {
+                id = int.Parse(HttpContext.Session.GetString("_UserId"));
                 usuarioModel.Delete(id);
                 return LocalRedirect("~/"); //Qual página?
-            }
-
-            }
         }
+
+    }
+}
     
