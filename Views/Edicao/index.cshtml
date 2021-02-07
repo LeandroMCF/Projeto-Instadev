@@ -1,0 +1,93 @@
+@{
+    ViewData["Title"] = "Edicao";
+}
+    <main>
+        <section class="edicao-pf">
+            <div class="content">
+
+                <div class="text-edit" >
+                    <div class="text-edit-perf">
+                        <h1>Editar Perfil</h1>
+                    </div>
+                </div>
+
+                <aside class="edit">
+
+                    <div class="perfil">
+                        <div class="conteudo alinhar-esquerda">
+                            <img src="images/padrao.png" alt="">
+
+                            <div class="texto">
+                                <h2>Foto</h2>
+                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                    <input type="file" name="Foto"> 
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="nome">
+                        <div class="conteudo alinhar-esquerda">
+                            <h2>Nome</h2>
+                            <div class="preencher-nome">
+                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                    <input type="text" name="Nome" class="input-nome" placeholder="Nome Completo">
+                                    <div>
+                                        <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
+                                        <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="nome-usuario">
+                        <div class="conteudo-usuario alinhar-esquerda">
+                            <h2>Nome de Usuário</h2>
+                            <div class="preencher-usuario">
+                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                    <input type="text" name="UserName" class="input-nome-usuario" placeholder="UserName">
+                                    <div>
+                                        <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por mais 14 dias.</p>
+                                        <p>Informações pessoais </p>
+                                        <p>Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="email">
+                        <div class="conteudo">
+                            <div class="endereco-email">
+                                <h2>E-mail</h2>
+                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                    <input type="email" name="Email" class="input-email" placeholder="Email">
+                                    <input type="senha" name="Senha" class="input-email" placeholder="Senha">
+                                </form>
+                            </div>
+                            <aside class="desativar-conta">
+                                <div class="botao-enviar">
+                                    <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                        <button type="submit" class="botao-alterar">Enviar</button>
+                                    </form>
+                                </div>
+                                <div class="botao-desativar">
+                                    <a href="#">Desativar minha conta definitivamente</a>
+                                </div>
+                            </aside>
+
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
