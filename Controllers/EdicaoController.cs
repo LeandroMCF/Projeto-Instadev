@@ -26,12 +26,13 @@ namespace Projeto_Instadev.Controllers
                 //Novo usuário para alteração
                 Usuario User = new Usuario();
                 
-                User.Nome = form["Nome"];
                 User.Foto = form["Foto"];
-                User.Email = form["Email"];
+                User.Nome = form["Nome"];
                 User.UserName = form["UserName"];
+                User.Email = form["Email"];
                 User.Senha = form["Senha"];
                 User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
+
 
                 if (User.Nome == null)
                     {
@@ -51,9 +52,9 @@ namespace Projeto_Instadev.Controllers
                         User.UserName = HttpContext.Session.GetString("_UserName");
                     }
                 if (User.Senha == null)
-                {
-                    User.Senha = HttpContext.Session.GetString("_Senha");
-                }
+                    {
+                        User.Senha = HttpContext.Session.GetString("_Senha");
+                    }
 
                 
                 int id = int.Parse(HttpContext.Session.GetString("_UserId"));
@@ -61,7 +62,7 @@ namespace Projeto_Instadev.Controllers
                 usuarioModel.Update(User, id);
                 
 
-                return LocalRedirect("~/PaginaPerfil");
+                return LocalRedirect("~/");
             }
             
             [Route("Deletar")]

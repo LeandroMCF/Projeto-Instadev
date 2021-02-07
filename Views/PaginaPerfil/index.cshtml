@@ -8,7 +8,7 @@
                 <div class="foto-perfil">
                 @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
                 {
-                    <img src="../images/@user.Foto" alt="Foto do Perfil">
+                    <img src="../img/publicacao/@user.Foto" alt="Foto do Perfil">
                 }
                 </div>
             <div class="info">

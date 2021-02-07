@@ -38,7 +38,7 @@
                 <aside class="perfil-lateral">
                     @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
-                        <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../images/@item.Foto"></a>                        
+                        <a asp-area="" asp-controller="PaginaPerfil" asp-action="Index"><img src="../img/publicacao/@item.Foto"></a>                        
                     }
                     <div class="texto">
                         <h2>@ViewBag.UserName</h2>
@@ -57,7 +57,7 @@
             <div class="itens">
                 @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdLogado)))
                     {
-                        <img src="../images/@item.Foto">                  
+                        <img src="../img/publicacao/@item.Foto">                  
                     }
                 <div class="texto">
                     <h2>Postar</h2>

@@ -15,7 +15,7 @@
 
                     <div class="perfil">
                         <div class="conteudo alinhar-esquerda">
-                            <img src="images/padrao.png" alt="">
+                            <img src="../img/publicacao/padrao.png" alt="">
 
                             <div class="texto">
                                 <h2>Foto</h2>
@@ -51,12 +51,12 @@
                             <div class="preencher-usuario">
                                 <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
                                     <input type="text" name="UserName" class="input-nome-usuario" placeholder="UserName">
+                                </form>
                                     <div>
                                         <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por mais 14 dias.</p>
                                         <p>Informações pessoais </p>
                                         <p>Forneça suas informações pessoais, mesmo se a conta for usada para uma empresa, um animal de estimação ou outra coisa. Elas não farão parte do seu perfil público.</p>
                                     </div>
-                                </form>
                             </div>
 
                         </div>
@@ -68,7 +68,7 @@
                                 <h2>E-mail</h2>
                                 <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
                                     <input type="email" name="Email" class="input-email" placeholder="Email">
-                                    <input type="senha" name="Senha" class="input-email" placeholder="Senha">
+                                    <input type="password" name="Senha" class="input-email" placeholder="Senha">
                                 </form>
                             </div>
                             <aside class="desativar-conta">
