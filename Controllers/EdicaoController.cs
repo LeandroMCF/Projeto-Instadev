@@ -23,7 +23,7 @@ namespace Projeto_Instadev.Controllers
 
             
         [Route("Editar")]
-        public IActionResult Editar(IFormCollection form)
+        public IActionResult EditarNome(IFormCollection form)
         {
             //Novo usuário para alteração
             Usuario User = new Usuario();
@@ -42,7 +42,7 @@ namespace Projeto_Instadev.Controllers
                 }
             if (User.Foto == null)
                 {
-                    User.Foto = HttpContext.Session.GetString("_Foto");
+                    User.Foto = "padrao.png";
                 }
             if (User.Email == null)
                 {
