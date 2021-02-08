@@ -53,7 +53,7 @@ namespace Projeto_Instadev.Controllers
 
             }else{
            
-                Mensagem = "Senha ou username incorreto !";
+                Mensagem = "Senha ou Email incorreto !";
             
                 return LocalRedirect("~/Login");
             }
