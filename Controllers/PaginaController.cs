@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Instadev.Models;
+using System;
 
 namespace Projeto_Instadev.Controllers
 {
@@ -53,15 +54,17 @@ namespace Projeto_Instadev.Controllers
                 usuarioModel.Update(User, id);
                 
 
-                return LocalRedirect("~/");
+                return Redirect("~/Perfil");
             }
             
             [Route("Deletar")]
 
             public IActionResult EditarDeletar(int id)
             {
-                usuarioModel.Delete(id);
-                return LocalRedirect("~/"); //Qual página?
+                Usuario User     = new Usuario();
+                User.IdUsuario   = int.Parse(HttpContext.Session.GetString("_UserId"));
+                User.Delete(id);
+                return Redirect("~/Login"); //Qual página?
             }
 
             }
