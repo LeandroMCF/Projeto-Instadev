@@ -18,6 +18,8 @@ namespace Projeto_Instadev.Controllers
         public IActionResult Index()
 
         {
+            ViewBag.Usuario = new Usuario();
+            ViewBag.IdUser = HttpContext.Session.GetString("_UserId");
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
             return View();
         }

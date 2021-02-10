@@ -17,8 +17,10 @@
 
                     <div class="perfil">
                         <div class="conteudo alinhar-esquerda">
-                            <img src="../img/publicacao/padrao.png" alt="">
-
+                            @foreach (Usuario item in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.Iduser)))
+                            {
+                                <img src="../img/publicacao/@item.Foto" alt="">
+                            }
                             <div class="texto">
                                 <h2>Foto</h2>
                                 <form action='@Url.Action("EditarFoto")' method="POST" enctype="multipart/form-data">
