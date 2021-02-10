@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Instadev.Models;
@@ -21,42 +22,31 @@ namespace Projeto_Instadev.Controllers
             return View();
         }
 
-            
-        [Route("Editar")]
+
+
+
+
+
+
+
+
+        [Route("EditarNome")]
         public IActionResult EditarNome(IFormCollection form)
         {
             //Novo usuário para alteração
             Usuario User = new Usuario();
             
-            User.Foto = form["Foto"];
+            User.Foto = "padrao.png";
             User.Nome = form["Nome"];
-            User.UserName = form["UserName"];
-            User.Email = form["Email"];
-            User.Senha = form["Senha"];
+            User.UserName = HttpContext.Session.GetString("_UserName");
+            User.Email = HttpContext.Session.GetString("_Email");
+            User.Senha = HttpContext.Session.GetString("_Senha");
             User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
-
 
             if (User.Nome == null)
                 {
                     User.Nome = HttpContext.Session.GetString("_Name");
-                }
-            if (User.Foto == null)
-                {
-                    User.Foto = "padrao.png";
-                }
-            if (User.Email == null)
-                {
-                    User.Email = HttpContext.Session.GetString("_Email");
-                }
-            if (User.UserName == null)
-                {
-                    User.UserName = HttpContext.Session.GetString("_UserName");
-                }
-            if (User.Senha == null)
-                {
-                    User.Senha = HttpContext.Session.GetString("_Senha");
-                }
-                
+                }         
 
             int id = int.Parse(HttpContext.Session.GetString("_UserId"));
                 
@@ -65,9 +55,127 @@ namespace Projeto_Instadev.Controllers
 
             return LocalRedirect("~/PaginaPerfil");
         }
-            
-        [Route("Deletar")]
 
+
+
+
+
+        [Route("EditarUserName")]
+        public IActionResult EditarUserName(IFormCollection form)
+        {
+            //Novo usuário para alteração
+            Usuario User = new Usuario();
+            
+            User.Foto = "padrao.png";
+            User.Nome = HttpContext.Session.GetString("_Name");
+            User.UserName = form["UserName"];
+            User.Email = HttpContext.Session.GetString("_Email");
+            User.Senha = HttpContext.Session.GetString("_Senha");
+            User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
+
+            if (User.UserName == null)
+                {
+                    User.UserName = HttpContext.Session.GetString("_UserName");
+                }         
+
+            int id = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+            usuarioModel.Update(User, id);
+                
+
+            return LocalRedirect("~/PaginaPerfil");
+        }
+
+
+
+
+
+
+        [Route("EditarEmail")]
+        public IActionResult EditarEmail(IFormCollection form)
+        {
+            //Novo usuário para alteração
+            Usuario User = new Usuario();
+            
+            User.Foto = "padrao.png";
+            User.Nome = HttpContext.Session.GetString("_Name");
+            User.UserName = HttpContext.Session.GetString("_UserName");
+            User.Email = form["Email"];
+            User.Senha = HttpContext.Session.GetString("_Senha");
+            User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
+
+            if (User.Email == null)
+                {
+                    User.Email = HttpContext.Session.GetString("_Email");
+                }         
+
+            int id = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+            usuarioModel.Update(User, id);
+                
+
+            return LocalRedirect("~/Edicao");
+        }
+
+
+
+
+
+
+
+        [Route("EditarFoto")]
+        public IActionResult EditarFoto(IFormCollection form)
+        {
+            //Novo usuário para alteração
+            Usuario User = new Usuario();
+            
+            User.Foto = form["Foto"];
+            if(form.Files.Count > 0)
+            {
+                // Upload Início
+                var file    = form.Files[0];
+                var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/publicacao");
+
+                if(!Directory.Exists(folder)){
+                    Directory.CreateDirectory(folder);
+                }
+                
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                using (var stream = new FileStream(path, FileMode.Create))  
+                {  
+                    file.CopyTo(stream);  
+                }
+                User.Foto  = file.FileName;                
+            }
+            else
+            {
+                User.Foto = "padrao.png";
+            }
+
+            User.Nome = HttpContext.Session.GetString("_Name");
+            User.UserName = HttpContext.Session.GetString("_UserName");
+            User.Email = HttpContext.Session.GetString("_Email");
+            User.Senha = HttpContext.Session.GetString("_Senha");
+            User.IdUsuario = int.Parse(HttpContext.Session.GetString("_UserId"));
+
+            if (User.Email == null)
+                {
+                    User.Email = HttpContext.Session.GetString("_Email");
+                }         
+
+            int id = int.Parse(HttpContext.Session.GetString("_UserId"));
+                
+            usuarioModel.Update(User, id);
+                
+
+            return LocalRedirect("~/");
+        }
+
+
+
+
+
+        [Route("Deletar")]
         public IActionResult EditarDeletar(int id)
         {
                 id = int.Parse(HttpContext.Session.GetString("_UserId"));

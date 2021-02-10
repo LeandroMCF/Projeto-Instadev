@@ -21,8 +21,9 @@
 
                             <div class="texto">
                                 <h2>Foto</h2>
-                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                <form action='@Url.Action("EditarFoto")' method="POST" enctype="multipart/form-data">
                                     <input type="file" name="Foto"> 
+                                    <button type="submit" class="botao-alterar">Enviar</button>
                                 </form>
                             </div>
 
@@ -34,13 +35,14 @@
                         <div class="conteudo alinhar-esquerda">
                             <h2>Nome</h2>
                             <div class="preencher-nome">
-                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                <form action='@Url.Action("EditarNome")' method="POST" enctype="multipart/form-data">
                                     <input type="text" name="Nome" class="input-nome" placeholder="Nome Completo">
+                                    <button type="submit" class="botao-alterar">Enviar</button>
+                                </form>
                                     <div>
                                         <p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
                                         <p>Você pode alterar o seu nome apenas duas vezes a cada 14 dias.</p>
                                     </div>
-                                </form>
                             </div>
 
                         </div>
@@ -51,8 +53,9 @@
                         <div class="conteudo-usuario alinhar-esquerda">
                             <h2>Nome de Usuário</h2>
                             <div class="preencher-usuario">
-                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
+                                <form action='@Url.Action("EditarUserName")' method="POST" enctype="multipart/form-data">
                                     <input type="text" name="UserName" class="input-nome-usuario" placeholder="UserName">
+                                    <button type="submit" class="botao-alterar">Enviar</button>
                                 </form>
                                     <div>
                                         <p>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para nascimento_tr por mais 14 dias.</p>
@@ -67,17 +70,16 @@
                     <div class="email">
                         <div class="conteudo">
                             <div class="endereco-email">
-                                <h2>E-mail</h2>
-                                <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
-                                    <input type="email" name="Email" class="input-email" placeholder="Email">
-                                    <input type="password" name="Senha" class="input-email" placeholder="Senha">
-                                </form>
+                                <div>
+                                    <h2>E-mail</h2>
+                                    <form action='@Url.Action("EditarEmail")' method="POST" enctype="multipart/form-data">
+                                        <input type="email" name="Email" class="input-email" placeholder="Email">                                    
+                                        <button type="submit" class="botao-alterar">Enviar</button>
+                                    </form>
+                                </div>
                             </div>
                             <aside class="desativar-conta">
                                 <div class="botao-enviar">
-                                    <form action='@Url.Action("Editar")' method="POST" enctype="multipart/form-data">
-                                        <button type="submit" class="botao-alterar">Enviar</button>
-                                    </form>
                                 </div>
                                 <div class="botao-desativar">
                                     <a asp-area="" asp-controller="Edicao" asp-action="EditarDeletar">Desativar minha conta definitivamente</a>

@@ -196,8 +196,10 @@ body{
     height: 50%;
     /* background-color: ivory; */
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding-bottom: 2em;
+    margin-left: 50px;
 }
 
 .endereco-email h2{
