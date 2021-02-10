@@ -45,13 +45,14 @@
                             <div class="imagemperfilpublicacao">
                                 @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
                                 {
-                                    <img src="../images/@user.Foto" alt="">
+                                    <img src="../img/Publicacao/@user.Foto" alt="">
                                 }
                             </div>
                             @foreach (Usuario user in ViewBag.Usuario.BuscarNome(int.Parse(ViewBag.IdUser)))
                             {
                                 <div class="nomeelocalizacao">
                                     <p>@user.UserName</p>
+                                    <a class="excluir" asp-area="" asp-controller="PaginaPerfil" asp-action="Excluir" asp-route-id="@item.IdPublicacao">Excluir Publicação</a>
                                 </div>
                             }
                             <div class="icons-publicacao">         

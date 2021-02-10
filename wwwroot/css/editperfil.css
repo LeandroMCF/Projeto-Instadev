@@ -104,6 +104,7 @@ body{
     height: 23%;
     /* background-color: blueviolet; */
     font-family: var(--font);
+    justify-content: center;
 }
 
 .nome h2{
@@ -143,6 +144,7 @@ body{
     height: 35%;
     /* background-color: lightblue; */
     font-family: var(--font);
+    justify-content: center;
 }
 
 .conteudo-usuario{
@@ -182,6 +184,8 @@ body{
     color: #909090;
 }
 
+
+
 .email{
     width: 100%;
     height: 20%;
@@ -189,6 +193,7 @@ body{
     font-family: var(--font);
     color: #000;
     padding-right: 80px;
+    justify-content: center;
 }
 
 .endereco-email{
@@ -223,6 +228,7 @@ body{
     font-family: var(--font);
     display: flex;
     margin-top: 1em;
+    justify-content: center;
 }
 
 .desativar-conta a{

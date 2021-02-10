@@ -74,11 +74,15 @@ body{
 
 .foto-perfil{
     display:flex;
-    width:150px;
-    height:150px;
+    max-width:150px;
+    max-height:150px;
     border-radius: 50%;
     margin-left: 25px;
     margin-top:25px;
+}
+.foto-perfil img{
+    max-width:150px;
+    max-height:150px;
 }
 
 
@@ -266,6 +270,14 @@ body{
     margin: 17px -45px;
  }
  
+.excluir{
+    text-decoration: none;
+    color: red;
+    font-size: 13px;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
  .comentarios .excluir{
     font-size: 13px;
     padding-left: 50px;

@@ -33,5 +33,17 @@ namespace Projeto_Instadev.Controllers
             
             return LocalRedirect("~/PaginaPerfil");
         }
+
+        [Route("PublicacaoPerfil/{id}")]
+
+        public IActionResult Excluir(int id)
+        {
+            publi.ExcluirPublicacao(id);
+            comentario.ExcluirComentPubli(id);
+            ViewBag.Publicacao = publi.ReadAll();
+            ViewBag.Comentario = new Comentario();
+            
+            return LocalRedirect("~/PaginaPerfil");
+        }
     }
 }

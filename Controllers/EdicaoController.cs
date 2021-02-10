@@ -38,7 +38,7 @@ namespace Projeto_Instadev.Controllers
             //Novo usuário para alteração
             Usuario User = new Usuario();
             
-            User.Foto = "padrao.png";
+            User.Foto = HttpContext.Session.GetString("_Foto");
             User.Nome = form["Nome"];
             User.UserName = HttpContext.Session.GetString("_UserName");
             User.Email = HttpContext.Session.GetString("_Email");
@@ -68,7 +68,7 @@ namespace Projeto_Instadev.Controllers
             //Novo usuário para alteração
             Usuario User = new Usuario();
             
-            User.Foto = "padrao.png";
+            User.Foto = HttpContext.Session.GetString("_Foto");
             User.Nome = HttpContext.Session.GetString("_Name");
             User.UserName = form["UserName"];
             User.Email = HttpContext.Session.GetString("_Email");
@@ -99,7 +99,7 @@ namespace Projeto_Instadev.Controllers
             //Novo usuário para alteração
             Usuario User = new Usuario();
             
-            User.Foto = "padrao.png";
+            User.Foto = HttpContext.Session.GetString("_Foto");
             User.Nome = HttpContext.Session.GetString("_Name");
             User.UserName = HttpContext.Session.GetString("_UserName");
             User.Email = form["Email"];
@@ -170,7 +170,7 @@ namespace Projeto_Instadev.Controllers
             usuarioModel.Update(User, id);
                 
 
-            return LocalRedirect("~/");
+            return LocalRedirect("~/Edicao");
         }
 
 
