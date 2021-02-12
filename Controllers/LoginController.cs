@@ -36,7 +36,7 @@ namespace Projeto_Instadev.Controllers
             var logado = 
             csv.Find(
                 x => 
-                x.Split(";")[4] == form["Email"] && 
+                x.Split(";")[4] == form["Email"] || x.Split(";")[5] == form["Email"] && 
                 x.Split(";")[6] == form["Senha"]
             );
             
@@ -53,7 +53,7 @@ namespace Projeto_Instadev.Controllers
 
             }else{
            
-                Mensagem = "Senha ou Email incorreto !";
+                Mensagem = "Senha ou Email/UserName incorreto !";
             
                 return LocalRedirect("~/Login");
             }
