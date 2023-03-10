@@ -1,5 +1,5 @@
 # Projeto-Instadev
-Um projeto em equipe bem interessando onde fizemos nosso proprio Instagram
+Um projeto em equipe bem interessante onde fizemos nosso proprio Instagram
 
 *  Tela de Login
 <img alt src="https://media.discordapp.net/attachments/579801622809542659/1083511048906215434/print0.png?width=280&height=467"> 
